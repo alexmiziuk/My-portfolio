@@ -1,0 +1,38 @@
+@import "../Base/Variables.scss";
+
+.menu {
+	&__list {
+		list-style-type: none;
+		padding-left: 35px;
+	}
+	&__link {
+		position: relative;
+		font-weight: 700;
+		font-size: 24px;
+		margin-bottom: 15px;
+		line-height: 36px;
+		&:before {
+			content: "";
+			position: absolute;
+			left: -35px;
+			top: 10px;
+			width: 15px;
+			height: 15px;
+			border: 1px solid $main-color;
+			transition: all 0.6s;
+		}
+		&:hover {
+			&:before {
+				background-color: $main-color;
+				left: -20px;
+				top: 10px;
+				transition: 0.2s ease-in-out;
+			}
+		}
+		a {
+			color: white;
+			text-decoration: none;
+			margin-bottom: 15px;
+		}
+	}
+}

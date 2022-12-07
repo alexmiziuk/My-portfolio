@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import MyPromo from './Componets/MyPromo/MyPromo';
+import './App.scss';
+import './Componets/Sidepanel/Sidepanel'
+import Sidepanel from './Componets/Sidepanel/Sidepanel';
+import Menu from './Componets/Menu/Menu';
+import './App.scss';
+import About from './Componets/About/About';
+import { useState } from 'react';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	const [menuActive, setMenuActive] = useState(false)
+
+	return (
+		<div className="App">
+			<Sidepanel />
+			<div className="hamburger" onClick={() => setMenuActive(!menuActive)}>
+				<span className='right'></span>
+				<span className='long'></span>
+				<span className='left'></span>
+			</div>
+			<Menu active={menuActive} setActive={setMenuActive} />
+			<MyPromo />
+			<About />
+		</div>
+	);
 }
 
 export default App;

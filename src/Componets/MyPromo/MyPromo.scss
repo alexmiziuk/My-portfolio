@@ -1,0 +1,40 @@
+@import '../Base/Mixins.scss';
+
+
+.myPromo {
+	height: 78vh;
+	position: relative;
+	background: url("../../Image/main-bg2.png") no-repeat 50% / cover;
+	padding-top: 205px;
+
+	&__title {
+		width: 450px;
+		margin-top: 10px;
+	}
+
+	&__subtitle {
+		position: relative;
+		padding-left: 10px;
+		z-index: 2;
+		@include before_circle;
+		
+	}
+	
+	&__btns {
+		margin-top: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 280px;
+	}
+	&__link {
+		color: #fff;
+		font-weight: bold;
+		text-decoration: none ;
+		&:hover {
+			color: #fff;
+			text-decoration: none !important;
+			
+		}
+	}
+}

@@ -1,0 +1,18 @@
+@import "./Variables.scss";
+
+@mixin before_circle {
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: -7px;
+		left: 0;
+		width: 36px;
+		height: 36px;
+		/* border: 3px solid #bc023d; */
+		/* border-radius: 100%; */
+		background: transparent;
+		border: 1px solid $main-color;
+		outline: none;
+	}
+}
