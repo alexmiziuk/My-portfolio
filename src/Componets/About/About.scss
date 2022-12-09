@@ -1,3 +1,78 @@
+@import "../Base/Variables.scss";
+@import "../Base/Mixins.scss";
+
 .about {
-	min-height: 620px;
+	min-height: 720px;
+	background-color: #0e0e0e;
+	&__img {
+		background: url("../../Image/about-bg.jpg") no-repeat 50% / cover;
+	}
+	&__block {
+		display: grid;
+		position: absolute;
+		column-gap: 70px;
+		margin-top: 120px;
+		width: 1040px;
+		min-height: 600px;
+		grid-template: minmax(600px, auto) / 400px 570px;
+		/* background-color: beige; */
+	}
+	&__content {
+		display: grid;
+
+		grid-template-rows: minmax(283px, auto) minmax(317px, auto);
+	}
+	&__inform {
+		padding: 11px 9px 30px 0;
+	}
+	& .title_fz16 {
+		padding-left: 12px;
+	}
+	&__subtitle {
+		position: relative;
+		z-index: 2;
+		@include before_circle;
+	}
+	&__text {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 21px;
+		margin-top: 16px;
+		color: $text-color;
+	}
+	&__divider {
+		span {
+			display: block;
+			width: 60px;
+			height: 3px;
+			background: $main-color;
+		}
+	}
+	&__technologies {
+		display: grid;
+		position: relative;
+
+		grid-template: repeat(2, minmax(116px, auto)) / repeat(2, 264px);
+		gap: 20px 40px;
+	}
+	&__technology {
+		position: relative;
+		padding-left: 58px;
+	}
+	&__icon {
+		position: absolute;
+		transform: translate(-190%, 15%);
+		@include before_circle;
+		img {
+			width: 30px;
+			height: 34px;
+			align-items: center;
+			transform: translate(52%, -15%);
+		}
+	}
+
+	&__content-tech {
+		margin-top: 6px;
+		color: $text-color;
+	}
 }
