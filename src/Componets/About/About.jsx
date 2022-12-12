@@ -18,7 +18,7 @@ const About = () => {
 							<div className="title title_fz36">
 								Мене звати Олександр
 							</div>
-							<div className="about__divider">
+							<div className="divider">
 								<span></span>
 							</div>
 							<div className="about__text">

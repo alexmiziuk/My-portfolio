@@ -3,7 +3,7 @@
 
 .about {
 	min-height: 720px;
-	background-color: #0e0e0e;
+	background-color: $background-color;
 	&__img {
 		background: url("../../Image/about-bg.jpg") no-repeat 50% / cover;
 	}
@@ -40,12 +40,9 @@
 		margin-top: 16px;
 		color: $text-color;
 	}
-	&__divider {
+	.divider {
 		span {
-			display: block;
-			width: 60px;
-			height: 3px;
-			background: $main-color;
+			margin: 0;
 		}
 	}
 	&__technologies {
@@ -73,6 +70,8 @@
 
 	&__content-tech {
 		margin-top: 6px;
+		font-size: 12px;
+		line-height: 18px;
 		color: $text-color;
 	}
 }

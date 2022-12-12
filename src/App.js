@@ -6,6 +6,9 @@ import Menu from './Componets/Menu/Menu';
 import './App.scss';
 import About from './Componets/About/About';
 import { useState } from 'react';
+import Education from './Componets/Education/Education';
+import Skills from './Componets/Skills/Skills';
+
 
 
 
@@ -24,6 +27,8 @@ function App() {
 			<Menu active={menuActive} setActive={setMenuActive} />
 			<MyPromo />
 			<About />
+			<Education />
+			<Skills />
 		</div>
 	);
 }

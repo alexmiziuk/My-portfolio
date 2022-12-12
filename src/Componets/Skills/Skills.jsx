@@ -1,0 +1,93 @@
+import React from 'react';
+import './Skills.scss';
+import IconeCss from '../../Icons/skills/css 4.svg';
+import IconeHtml from '../../Icons/skills/html 6.svg';
+import IconeJQ from '../../Icons/skills/icons8-jquery-is-a-javascript-library-designed-to-simplify-html-50.svg';
+import IconeJS from '../../Icons/skills/js 1.svg';
+import IconeReact from '../../Icons/skills/atom (1) 1.svg';
+
+const Skills = () => {
+	return (
+		<section className='skills'>
+			<div className="container">
+				<h2 className="title title_fz16 education__title">
+					Навички
+				</h2>
+				<div className="title title_fz36 education__sibtitle">
+					Чим я можу бути корисним
+				</div>
+				<div className="divider">
+					<span></span>
+				</div>
+				<div className="skills__wrapper">
+					<div className="skills__variety">
+						<div className='skills__img'>
+							<img
+								src={IconeHtml}
+								alt={'Html'}
+							/>
+						</div>
+						<h3 className='title title_fz14 skills__title'>
+							HTML5
+						</h3>
+						<div className='skills__text'>
+						Саме він створює каркас вашого сайту або програми, а п'ята версія дозволить мені створювати більш SEO-оптимізовану структуру вашого продукту
+						</div>
+					</div>
+					<div className="skills__variety">
+						<div className='skills__img'>
+							<img
+								src={IconeCss}
+								alt={'Css'}
+							/>
+						</div>
+						<h3 className='title title_fz14 skills__title skills__title'>
+							CSS3
+						</h3>
+						<div className='skills__text'>Ця мова стилів дозволяє мені створювати абсолютно будь-який зовнішній вигляд вашого сайту або програми. Все обмежується лише вашою фантазією!</div>
+					</div>
+					<div className="skills__variety">
+						<div className='skills__img'>
+							<img
+								src={IconeJS}
+								alt={'JavaScript'}
+							/>
+						</div>
+						<h3 className='title title_fz14 skills__title'>
+							Java Script
+						</h3>
+						<div className='skills__text'>Ця мова програмування дозволяє оживити все, що завгодно: слайдери, вікна, підказки, вкладки, отримання даних від сервера та багато іншого</div>
+					</div>
+					<div className="skills__variety">
+						<div className='skills__img'>
+							<img
+								src={IconeJQ}
+								alt={'Jquery'}
+							/>
+						</div>
+						<h3 className='title title_fz14 skills__title'>
+							Jquery
+						</h3>
+						<div className='skills__text'>Бібліотека Jquery дозволить прискорити розробку. Без необхідності інтегрувати в проект ми її не будемо, але звичка роботи з нею присутня</div>
+					</div>
+					<div className="skills__variety">
+						<div className='skills__img'>
+							<img
+								src={IconeReact}
+								alt={React}
+							/>
+						</div>
+						<h3 className='title title_fz14 skills__title'>
+							React
+						</h3>
+						<div className='skills__text'>Ця бібліотека дозволяє створювати веб-додатки. Ми можемо створити максимально інтерактивний продукт саме під ваші цілі</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+	);
+};
+
+export default Skills;
