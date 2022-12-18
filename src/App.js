@@ -5,9 +5,12 @@ import Sidepanel from './Componets/Sidepanel/Sidepanel';
 import Menu from './Componets/Menu/Menu';
 import './App.scss';
 import About from './Componets/About/About';
-import { useState } from 'react';
+import Contacts from './Componets/Contacts/Contacts';
+import { useState} from 'react';
 import Education from './Componets/Education/Education';
 import Skills from './Componets/Skills/Skills';
+import Portfolio from './Componets/Portfolio/Portfolio';
+
 
 
 
@@ -15,6 +18,7 @@ import Skills from './Componets/Skills/Skills';
 function App() {
 
 	const [menuActive, setMenuActive] = useState(false)
+	
 
 	return (
 		<div className="App">
@@ -29,6 +33,9 @@ function App() {
 			<About />
 			<Education />
 			<Skills />
+			<Portfolio />
+			<Contacts />
+
 		</div>
 	);
 }

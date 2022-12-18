@@ -1,0 +1,51 @@
+@import "../Base/Variables.scss";
+@import '../Base/Mixins.scss';
+
+.portfolio {
+	padding-top: 120px;
+	background: $background-color;
+	min-height: 745px;
+	&__title {
+		position: relative;
+		text-align: center;
+		@include before_circle;
+		&:before {
+			top: -6;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__subtitle {
+		text-align: center;
+	}
+	&__wrapper {
+		margin-top: 60px;
+		display: grid;
+		grid-template: repeat(2, 280px) / repeat(3, 280px);
+		grid-auto-rows: 280px;
+		gap: 10px;
+		justify-content: center;
+		
+		img {
+			width: 100%;
+			
+		}
+		.vertical {
+			height: 100%;
+		}
+		
+	}
+	&__efect {
+		transition: all 0.6s;
+		&:hover {
+			filter: opacity(70%);
+		}
+		
+	}
+}
+
+#fourth {
+	grid-column: 3/4;
+	grid-row: 1/3;
+	
+}
