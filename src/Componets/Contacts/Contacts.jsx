@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contacts.scss';
@@ -79,11 +80,11 @@ const Contacts = () => {
 						</div>
 						<form ref={form} onSubmit={sendEmail} className='contacts__form'>
 							<div className="contacts__input">
-								<input name='user_name' required='required' id='name' type="text" /* pattern="(\d|(\d,\d{0,2}))" title="YOUR_WARNING_TEXT" *//>
+								<input name='user_name' required='required' id='name' type="text" /* title="YOUR_WARNING_TEXT" */ />
 								<label htmlFor="name">Ваше ім'я</label>
 							</div>
 							<div className="contacts__input">
-								<input name="user_email" required='required' id='email' type="email" />
+								<input name="user_email" required='required' id='email' type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
 								<label htmlFor="email">Ваша пошта</label>
 							</div>
 							<div className="contacts__textarea">
@@ -106,9 +107,6 @@ const Contacts = () => {
 				</div>
 
 			</div>
-
-
-
 		</section>
 	);
 };

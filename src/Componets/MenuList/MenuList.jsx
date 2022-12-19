@@ -1,13 +1,11 @@
 import React from 'react';
 import './MenuList.scss'
 
-const MenuList = () => {
-	const Items = ['ПРО МЕНЕ', 'МІЙ ДОСВІД', 'МОЇ НАВИЧКИ', 'МОЇ РОБОТИ', 'ПРАЙС-ЛИСТ', 'КОНТАКТИ'];
-
+const MenuList = ({items}) => {
 	return (
 		<ul className="menu__list">
-			{Items.map(item => (
-				<li key={item} className="menu__link"><a href='https://qna.habr.com/q/528748'>{item}</a></li>
+			{items.map(item => (
+				<li key={item.id} className="menu__link"><a href={item.href}>{item.value}</a></li>
 			))}
 		</ul>
 	);
