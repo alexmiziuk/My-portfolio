@@ -7,12 +7,12 @@ import Udemiicon from '../../Icons/experience/developer_board_white_24dp.svg';
 
 const Education = () => {
 	return (
-		<section className='education'>
+		<section className='education' id='educationid'>
 			<div className="container">
-				<h2 className="title title_fz16 education__title">
+				<h2 className="title title-fz16 education__title">
 					Досвід
 				</h2>
-				<div className="title title_fz36 education__sibtitle">
+				<div className="title title-fz36 education__sibtitle">
 					Чим я можу бути корисним
 				</div>
 				<div className="divider">
@@ -20,7 +20,7 @@ const Education = () => {
 				</div>
 				<div className="education__wrapper">
 					<div className="education__column">
-						<h3 className="title title_fz20 education__column-title">
+						<h3 className="title title-fz20 education__column-title">
 							Освіта
 						</h3>
 						<ul>
@@ -39,7 +39,7 @@ const Education = () => {
 										<div className="education__item-icon">
 											<img src={Icons} alt={'university'} />
 										</div>
-										<h4 className='title title_fz14 education__finished'>
+										<h4 className='title title-fz14 education__finished'>
 											ДГУ ім. С. С. Прокоф'єва
 										</h4>
 										<div className="education__degree">Диплом спеціаліста</div>
@@ -65,7 +65,7 @@ const Education = () => {
 										<div className="education__item-icon">
 											<img src={Webicon} alt={'Web-developer'} />
 										</div>
-										<h4 className='title title_fz14 education__finished'>
+										<h4 className='title title-fz14 education__finished'>
 										Udemi
 										</h4>
 										<div className="education__degree">Курс по Web-розробці <span>|</span> Курс по JavaScript</div>
@@ -91,7 +91,7 @@ const Education = () => {
 										<div className="education__item-icon">
 											<img src={Udemiicon} alt={'udemi'} />
 										</div>
-										<h4 className='title title_fz14 education__finished'>
+										<h4 className='title title-fz14 education__finished'>
 										Udemi
 										</h4>
 										<div className="education__degree">Курс по React</div>

@@ -39,23 +39,23 @@ const Contacts = () => {
 	};
 
 	return (
-		<section className='contacts'>
+		<section className='contacts' id='contactsid'>
 			<div className="container">
 				<div className="contacts__wrapper">
 					<div className="contacts__photo">
 						<img src={ImgContacts} alt={'contacts'} />
 					</div>
 					<div className="contacts__descr">
-						<h2 className="title title_fz16 contacts__title">
+						<h2 className="title title-fz16 contacts__title">
 							Контакти
 						</h2>
-						<div className="title title_fz36 contacts__subtitle">
+						<div className="title title-fz36 contacts__subtitle">
 							Зв'яжіться зі мною
 						</div>
 						<div className="divider">
 							<span></span>
 						</div>
-						<div className="title title_fz14 contacts__text">
+						<div className="title title-fz14 contacts__text">
 							Будь-яким зручним для вас способом
 						</div>
 						<div className="contacts__socials">
@@ -75,7 +75,7 @@ const Contacts = () => {
 								</div>
 							</div>
 						</div>
-						<div className="title title_fz14 contacts__text">
+						<div className="title title-fz14 contacts__text">
 							Або залиште ваші дані, я сам вам напишу
 						</div>
 						<form ref={form} onSubmit={sendEmail} className='contacts__form'>

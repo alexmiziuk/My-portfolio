@@ -1,6 +1,7 @@
 @import "../Base/Variables.scss";
 @import "../Base/Mixins.scss";
 
+
 .about {
 	min-height: 720px;
 	background-color: $background-color;
@@ -34,7 +35,7 @@
 		@include before_circle;
 	}
 	&__text {
-		font-weight: 500;
+		font-family: "Lato Medium";
 		font-size: 14px;
 		line-height: 21px;
 		margin-top: 16px;
@@ -73,5 +74,7 @@
 		font-size: 12px;
 		line-height: 18px;
 		color: $text-color;
+		font-family: "Lato Medium";
+		
 	}
 }

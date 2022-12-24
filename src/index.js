@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './Fonts/Lato-Bold.ttf';
+import './Fonts/Lato-Bold.eot';
+import './Fonts/Lato-Bold.woff';
+import './Fonts/Lato-Medium.ttf';
+import './Fonts/Lato-Medium.eot';
+import './Fonts/Lato-Medium.woff';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

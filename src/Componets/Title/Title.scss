@@ -1,26 +1,24 @@
 .title {
 	color:white;
-	font-weight: bold;
+	font-family: "Lato Bold";
 	font-size: 36px;
 	line-height: 60px;
 	z-index: 10;
-	/* &_white {
-		color:white;
-	} */
-	&_fz14 {
+	&-fz14 {
 		font-size: 14px;
 		line-height: 21px;
 	}
-	&_fz16 {
+	&-fz16 {
 		font-size: 16px;
 		line-height: 24px;
 	}
-	&_fz20 {
+	&-fz20 {
 		font-size: 20px;
 		line-height: 30px;
 
 	}
-	&_fz48 {
+	&-fz48 {
 		font-size: 48px;
-	}
+		
+		}
 }

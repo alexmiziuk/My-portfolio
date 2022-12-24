@@ -6,7 +6,7 @@ import Menu from './Componets/Menu/Menu';
 import './App.scss';
 import About from './Componets/About/About';
 import Contacts from './Componets/Contacts/Contacts';
-import { useState} from 'react';
+import { useState } from 'react';
 import Education from './Componets/Education/Education';
 import Skills from './Componets/Skills/Skills';
 import Portfolio from './Componets/Portfolio/Portfolio';
@@ -18,7 +18,7 @@ import Portfolio from './Componets/Portfolio/Portfolio';
 function App() {
 
 	const [menuActive, setMenuActive] = useState(false)
-	
+
 
 	return (
 		<div className="App">
@@ -35,8 +35,7 @@ function App() {
 			<Skills />
 			<Portfolio />
 			<Contacts />
-
-		</div>
+			</div>
 	);
 }
 

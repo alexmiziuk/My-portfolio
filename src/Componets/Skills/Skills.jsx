@@ -8,13 +8,13 @@ import IconeReact from '../../Icons/skills/atom (1) 1.svg';
 
 const Skills = () => {
 	return (
-		<section className='skills'>
+		<section className='skills' id='skillsid'>
 			<div className="container">
-				<h2 className="title title_fz16 education__title">
+				<h2 className="title title-fz16 education__title">
 					Навички
 				</h2>
-				<div className="title title_fz36 education__sibtitle">
-					Чим я можу бути корисним
+				<div className="title title-fz36 education__sibtitle">
+				Що я використовую у роботі
 				</div>
 				<div className="divider">
 					<span></span>
@@ -27,7 +27,7 @@ const Skills = () => {
 								alt={'Html'}
 							/>
 						</div>
-						<h3 className='title title_fz14 skills__title'>
+						<h3 className='title title-fz14 skills__title'>
 							HTML5
 						</h3>
 						<div className='skills__text'>
@@ -41,7 +41,7 @@ const Skills = () => {
 								alt={'Css'}
 							/>
 						</div>
-						<h3 className='title title_fz14 skills__title skills__title'>
+						<h3 className='title title-fz14 skills__title skills__title'>
 							CSS3
 						</h3>
 						<div className='skills__text'>Ця мова стилів дозволяє мені створювати абсолютно будь-який зовнішній вигляд вашого сайту або програми. Все обмежується лише вашою фантазією!</div>
@@ -53,7 +53,7 @@ const Skills = () => {
 								alt={'JavaScript'}
 							/>
 						</div>
-						<h3 className='title title_fz14 skills__title'>
+						<h3 className='title title-fz14 skills__title'>
 							Java Script
 						</h3>
 						<div className='skills__text'>Ця мова програмування дозволяє оживити все, що завгодно: слайдери, вікна, підказки, вкладки, отримання даних від сервера та багато іншого</div>
@@ -65,7 +65,7 @@ const Skills = () => {
 								alt={'Jquery'}
 							/>
 						</div>
-						<h3 className='title title_fz14 skills__title'>
+						<h3 className='title title-fz14 skills__title'>
 							Jquery
 						</h3>
 						<div className='skills__text'>Бібліотека Jquery дозволить прискорити розробку. Без необхідності інтегрувати в проект ми її не будемо, але звичка роботи з нею присутня</div>
@@ -77,7 +77,7 @@ const Skills = () => {
 								alt={React}
 							/>
 						</div>
-						<h3 className='title title_fz14 skills__title'>
+						<h3 className='title title-fz14 skills__title'>
 							React
 						</h3>
 						<div className='skills__text'>Ця бібліотека дозволяє створювати веб-додатки. Ми можемо створити максимально інтерактивний продукт саме під ваші цілі</div>

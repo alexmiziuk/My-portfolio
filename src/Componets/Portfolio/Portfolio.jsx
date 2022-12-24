@@ -8,12 +8,12 @@ import Ipad from '../../Image/works/ipad.jpg';
 
 const Portfolio = () => {
 	return (
-		<section className="portfolio">
+		<section className="portfolio" id='portfolioid'>
 			<div className="container">
-				<h2 className="title title_fz16 portfolio__title">
+				<h2 className="title title-fz16 portfolio__title">
 					Портфоліо
 				</h2>
-				<div className="title title_fz36 portfolio__subtitle">
+				<div className="title title-fz36 portfolio__subtitle">
 					Мої роботи
 				</div>
 				<div className="divider">

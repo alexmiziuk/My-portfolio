@@ -6,7 +6,7 @@ import Design from '../../Icons/about_me/design_white_24dp.svg'
 
 const About = () => {
 	return (
-		<section className="about">
+		<section className="about" id='aboutid'>
 			<div className="container">
 				<div className="about__block">
 
@@ -14,8 +14,8 @@ const About = () => {
 					<div className="about__img"></div>
 					<div className="about__content">
 						<div className="about__inform">
-							<div className="about__subtitle title title_fz16">Про мене</div>
-							<div className="title title_fz36">
+							<div className="about__subtitle title title-fz16">Про мене</div>
+							<div className="title title-fz36">
 								Мене звати Олександр
 							</div>
 							<div className="divider">
@@ -30,14 +30,14 @@ const About = () => {
 								<div className="about__icon">
 									<img src={Developer} alt={'icons'} />
 								</div>
-								<div className="title title_fz14">Web-розробка</div>
+								<div className="title title-fz14">Web-розробка</div>
 								<div className="about__content-tech">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 							</div>
 							<div className="about__technology">
 								<div className="about__icon">
 									<img src={Devices} alt={'icons'} />
 								</div>
-								<div className="title title_fz14
+								<div className="title title-fz14
 								">Розробка застосунків</div>
 								<div className="about__content-tech">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 							</div>
@@ -46,7 +46,7 @@ const About = () => {
 									<img src={Design} alt={'icons'} />
 								</div>
 								<div className="title 
-								title_fz14">UI/UX Design</div>
+								title-fz14">UI/UX Design</div>
 								<div className="about__content-tech">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 							</div>
 
