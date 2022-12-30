@@ -37,7 +37,6 @@
 	}
 	&__social {
 		margin-right: 20px;
-		
 	}
 	&__links {
 		img {
@@ -75,7 +74,6 @@
 			padding: 0 20px;
 			font-size: 12px;
 		}
-		
 	}
 
 	&__textarea {
@@ -99,9 +97,89 @@
 		svg {
 			width: 245px;
 			height: 45px;
-			
 		}
 	}
+	/* .overlay__modal {
+		position: fixed;
+		display: none;
+		width: 200%;
+		height: 100%;
+		left: -50%;
+		top: 0;
+		background-color: rgba(0, 0, 0, 0.56);
 	
+		
+		.modal {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 380px;
+			min-height: 175px;
+			background-color: white;
+			color: black;
+			padding: 38px 40px 40px 40px;
+			&__close {
+				position: absolute;
+				top: 0;
+				right: -40px;
+				font-size: 41px;
+				line-height: 21px;
+				color: $main-color;
+
+			}
+			&__subtitle {
+				color: #0d0d0d;
+				font-family: "Lato Bold";
+				font-size: 19px;
+				text-align: center;
+				line-height: 45px;
+			}
+			&__descr {
+				color: #0d0d0d;
+				font-family: "Lato Medium";
+				font-size: 15px;
+				text-align: center;
+				line-height: 35px;
+			}
+		}
+		
+	} */
+	/* .active {
+		display: block !important;
+	} */
+}
+
+.swal {
+	&-overlay {
+		background-color: rgb(0 0 0 / 78%);
+	}
+	&-modal {
+		padding: 16px 0;
+		border-radius: 0;
+
+	}
+	&-title {
+		font-family: "Lato Bold" !important;
+		color: black;
+	}
+	&-text {
+		font-family: "Lato Medium";
+		color: black;
+	}
+	&-button {
+		background-color: $main-color;
+		border-radius: 0;
+		font-weight: 300;
+		font-size: 16px;
+		appearance: none;
+	}
+	&-footer {
+	
+		background-color: rgb(245, 248, 250);
+		margin-top: 32px;
+		border-top: 1px solid #e9eef1;
+		overflow: hidden;
+	}
 }
 

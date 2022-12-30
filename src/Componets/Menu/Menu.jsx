@@ -5,7 +5,7 @@ import './Menu.scss';
 const Menu = ({ active, setActive }) => {
 	const items = [
 		{ id: 1, value: 'ПРО МЕНЕ', href: '/#aboutid' },
-		{ id: 2, value: 'МІЙ ДОСВІД', href: '/#educationid' },
+		{ id: 2, value: 'МОЯ ОСВІТА', href: '/#educationid' },
 		{ id: 3,value: 'МОЇ НАВИЧКИ', href: '/#skillsid' },
 		{ id: 4, value: 'МОЇ РОБОТИ', href: '/#portfolioid' },
 		{ id: 5, value: 'КОНТАКТИ', href: '/#contactsid' }

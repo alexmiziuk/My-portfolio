@@ -1,5 +1,9 @@
 @import "./Componets/Base/Variables.scss";
 
+* {
+	outline: 0 !important;
+ }
+
 
 .hamburger {
 	position: absolute;
@@ -50,3 +54,4 @@
 		}
 	}
 }
+

@@ -1,5 +1,8 @@
 import React from 'react';
+
 import './Portfolio.scss';
+import '../Animate/Animate.css';
+
 import Uber from '../../Image/works/uber.jpg';
 import Pulse from '../../Image/works/pulse.jpg';
 import Bread from '../../Image/works/bread.jpg';
@@ -7,13 +10,14 @@ import Plans from '../../Image/works/plans.jpg';
 import Ipad from '../../Image/works/ipad.jpg';
 
 const Portfolio = () => {
+	
 	return (
-		<section className="portfolio" id='portfolioid'>
+		<section className="portfolio" >
 			<div className="container">
-				<h2 className="title title-fz16 portfolio__title">
+				<h2 className="title title-fz16 portfolio__title" >
 					Портфоліо
 				</h2>
-				<div className="title title-fz36 portfolio__subtitle">
+				<div className="title title-fz36 portfolio__subtitle" id='portfolioid'>
 					Мої роботи
 				</div>
 				<div className="divider">

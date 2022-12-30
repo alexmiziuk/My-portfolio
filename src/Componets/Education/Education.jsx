@@ -1,27 +1,38 @@
 import React from 'react';
+import WOW from 'wowjs';
+import { useEffect } from 'react';
+
+import '../Animate/Animate.css';
 import './Education.scss';
+
 import Icons from '../../Icons/experience/education_white_24dp.svg';
 import Webicon from '../../Icons/experience/cast_for_education_white_24dp.svg';
 import Udemiicon from '../../Icons/experience/developer_board_white_24dp.svg';
 
 
 const Education = () => {
+	useEffect(() => {
+		new WOW.WOW({
+			live: false
+		}).init();
+	}, [])
 	return (
-		<section className='education' id='educationid'>
+		<section className='education' >
 			<div className="container">
-				<h2 className="title title-fz16 education__title">
-					Досвід
+				<h2 className="title title-fz16 education__title" id='educationid'> 
+					Освіта
 				</h2>
-				<div className="title title-fz36 education__sibtitle">
-					Чим я можу бути корисним
+				<div className=" title title-fz36 education__sibtitle">
+					Знання які мені домогають
 				</div>
 				<div className="divider">
 					<span></span>
 				</div>
 				<div className="education__wrapper">
 					<div className="education__column">
-						<h3 className="title title-fz20 education__column-title">
-							Освіта
+						<h3 className=" title title-fz20 education__column-title wow animate__rotateInDownLeft"
+						data-wow-duration="1.5s" data-wow-delay="0s" id='first'>
+							Навчання
 						</h3>
 						<ul>
 							<li>
