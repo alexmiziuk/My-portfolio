@@ -19,9 +19,9 @@ const Skills = () => {
 	}, [])
 
 	return (
-		<section className='skills' >
+		<section className='skills' id='skillsid' >
 			<div className="container">
-				<h2 className="title title-fz16 education__title" id='skillsid'>
+				<h2 className="title title-fz16 education__title" >
 					Навички
 				</h2>
 				<div className="title title-fz36 education__sibtitle">

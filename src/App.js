@@ -10,7 +10,7 @@ import { useState } from 'react';
 import Education from './Componets/Education/Education';
 import Skills from './Componets/Skills/Skills';
 import Portfolio from './Componets/Portfolio/Portfolio';
-
+import ScrollUp from './Componets/ScrollUp/ScrollUp';
 
 
 
@@ -18,6 +18,8 @@ import Portfolio from './Componets/Portfolio/Portfolio';
 function App() {
 
 	const [menuActive, setMenuActive] = useState(false)
+
+	
 
 
 	return (
@@ -35,6 +37,7 @@ function App() {
 			<Skills />
 			<Portfolio />
 			<Contacts />
+			<ScrollUp  />
 		</div>
 	);
 }

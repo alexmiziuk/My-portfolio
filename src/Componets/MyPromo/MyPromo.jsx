@@ -9,7 +9,7 @@ import Button from '../Button/Button';
 
 const MyPromo = () => {
 	return (
-		<section className="mypromo">
+		<section className="mypromo" id='mypromoid'>
 			{/* <Hamburger /> */}
 			<div className="container">
 				<div className="title title-fz16 mypromo__subtitle">
