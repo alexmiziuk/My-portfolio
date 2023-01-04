@@ -1,7 +1,6 @@
 @import "../Base/Variables.scss";
 @import "../Base/Mixins.scss";
 
-
 .about {
 	min-height: 720px;
 	background-color: $background-color;
@@ -40,6 +39,11 @@
 		line-height: 21px;
 		margin-top: 16px;
 		color: $text-color;
+		span {
+			color: $main-color;
+			font-weight: 700;
+			font-size: 14px;
+		}
 	}
 	.divider {
 		span {
@@ -75,6 +79,5 @@
 		line-height: 18px;
 		color: $text-color;
 		font-family: "Lato Medium";
-		
 	}
 }

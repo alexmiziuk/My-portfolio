@@ -55,7 +55,7 @@ const Education = () => {
 										</h4>
 										<div className="education__degree">Диплом спеціаліста</div>
 										<div className="education__body">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.
+										Я отримав вищу освіту у сфері музики. Безпосередньо - це не пов'язано з програмуванням, проте сформувало в мені розуміння естетики та прищепило гарний смак. Безумовно ці якості впливають на те, як виглядатиме сайт.
 										</div>
 									</div>
 
@@ -81,7 +81,7 @@ const Education = () => {
 										</h4>
 										<div className="education__degree">Курс по Web-розробці <span>|</span> Курс по JavaScript</div>
 										<div className="education__body">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.
+										Під час навчання, я освоїв всі основні моменти, і тонкощі, які необхідні для створення сайту та інтерактивності на ньому. Я знаю, як грамотно організувати веб-ресурс, і як максимально його оптимізувати.
 										</div>
 									</div>
 
@@ -107,7 +107,7 @@ const Education = () => {
 										</h4>
 										<div className="education__degree">Курс по React</div>
 										<div className="education__body">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.
+										Я отримав знання, які дозволяють розширювати функціональність сайту і не тільки. Я вмію створювати web-додатки, функціональність яких націлена на вирішення певних завдань , і виходить за рамки простого споживання контенту.
 										</div>
 									</div>
 

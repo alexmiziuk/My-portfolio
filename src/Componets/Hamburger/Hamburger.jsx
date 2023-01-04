@@ -1,16 +1,16 @@
-/* import React from 'react';
+ import React from 'react';
 import './Hamburger.scss'
 
-const Hamburger = () => {
+const Hamburger = ({menuActive, setMenuActive}) => {
 	return (
 		<div>
-			<div className="hamburger">
-				<span></span>
+			<div className="hamburger" onClick={() => setMenuActive(!menuActive)}>
+				<span className='right'></span>
 				<span className='long'></span>
-				<span></span>
+				<span className='left'></span>
 			</div>
 		</div>
 	);
 };
 
-export default Hamburger; */
+export default Hamburger; 

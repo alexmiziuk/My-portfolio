@@ -1,5 +1,8 @@
 @import "../Base/Variables.scss";
 
+.fixed {
+	position: fixed;
+}
 .pageup {
 	display: block;
 	position: fixed;
@@ -10,6 +13,9 @@
 	background-color: $background-color;
 	border-radius: 100%;
 	border: 2px solid  $main-color;
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.6s;
 	cursor: pointer;
 	img {
 		width: 100%;
@@ -17,6 +23,10 @@
 }
 
 .hidden {
-	display: none;
+	opacity: 0;
+	visibility: hidden;
+	bottom: -7%;
+	transition: all 0.6s;
+
 }
 

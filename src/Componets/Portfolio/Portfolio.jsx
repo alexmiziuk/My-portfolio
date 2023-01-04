@@ -14,10 +14,10 @@ const Portfolio = () => {
 	return (
 		<section className="portfolio" >
 			<div className="container">
-				<h2 className="title title-fz16 portfolio__title" >
+				<h2 className="title title-fz16 portfolio__title" id='portfolioid'>
 					Портфоліо
 				</h2>
-				<div className="title title-fz36 portfolio__subtitle" id='portfolioid'>
+				<div className="title title-fz36 portfolio__subtitle" >
 					Мої роботи
 				</div>
 				<div className="divider">

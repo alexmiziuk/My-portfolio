@@ -1,4 +1,4 @@
-/* @import '../Base/Variables.scss';
+ @import '../Base/Variables.scss';
 
 .hamburger {
 	position: absolute;
@@ -9,15 +9,45 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-end;
-	z-index: 25;
+	z-index: 9;
 	cursor: pointer;
-	span {
+
+	
+	span.right {
 		display: block;
 		width: 30px;
 		height: 3px;
 		background: $main-color;
 	}
-	span.long {
-		width: 36px;
+	&:hover {
+		span.right {
+			background: white;
+			transition: 0.6s ease-in-out;
+		}
 	}
-} */
+	span.left {
+		display: block;
+		width: 30px;
+		height: 3px;
+		background: $main-color;
+	}
+	&:hover {
+		span.left {
+			background: white;
+			transition: 0.6s ease-in-out;
+		}
+	}
+	span.long {
+		display: block;
+		width: 36px;
+		height: 3px;
+		background: $main-color;
+	}
+	&:hover {
+		span.long {
+			background: white;
+			transition: 0.6s ease-in-out;
+		}
+	}
+}
+ 
