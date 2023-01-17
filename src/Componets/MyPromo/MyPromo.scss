@@ -1,8 +1,7 @@
-@import '../Base/Mixins.scss';
-
+@import "../Base/Mixins.scss";
 
 .mypromo {
-	height: 78vh;
+	height: 72vh;
 	position: relative;
 	background: url("../../Image/main-bg2.png") no-repeat 50% / cover;
 	padding-top: 205px;
@@ -14,12 +13,10 @@
 
 	&__subtitle {
 		position: relative;
-		padding-left: 10px;
 		z-index: 2;
 		@include before_circle;
-		
 	}
-	
+
 	&__btns {
 		margin-top: 25px;
 		display: flex;
@@ -30,11 +27,45 @@
 	&__link {
 		color: #fff;
 		font-family: "Lato Bold";
-		text-decoration: none ;
+		text-decoration: none;
 		&:hover {
 			color: #fff;
 			text-decoration: none !important;
-			
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.mypromo {
+		&__title {
+			width: 335px;
+		}
+		.center {
+			.btn {
+				&:hover {
+					transition: none;
+					background: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.mypromo {
+		background: url(http://localhost:3000/static/media/main-bg2.6d6257756790d8aeaa53.png) no-repeat 59% / cover;
+		&__subtitle {
+			margin-left: 10px;
+		}
+		&__title {
+			margin-left: 10px;
+			width: 272px;
+		}
+		&__btns {
+			margin-top: 30px;
+		}
+		.btn {
+			margin-left: 10px;
 		}
 	}
 }

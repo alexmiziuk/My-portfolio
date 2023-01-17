@@ -2,7 +2,6 @@
 @import "../Base/Mixins.scss";
 
 .education {
-	/* min-height: 805px; */
 	background-color: $background-color;
 	padding-top: 120px;
 	&__column {
@@ -20,8 +19,6 @@
 				width: 15px;
 				background-color: $main-color;
 				border: 1px solid #91c9ff;
-				/* border-radius: 100%; */
-
 				left: 0;
 				top: 50%;
 				transform: translateY(-50%);
@@ -34,27 +31,7 @@
 	li {
 		position: relative;
 		padding-left: 145px;
-		/* &:after {
-			content: "";
-			width: 1px;
-			height: 128%;
-			position: absolute;
-			top: -52px;
-			left: 0;
-			background-color: $main-color;
-		}  */
 	}
-
-	/* &__line-one {
-		position: absolute;
-		height: 1px;
-		width: 157px;
-		top: -16px;
-		left: 29px;
-		background: $main-color;
-		transform: rotate(-90deg) translate(-27%, -10699%);
-	}
- */
 	&__line-two {
 		position: absolute;
 		height: 1px;
@@ -64,17 +41,6 @@
 		background: $main-color;
 		transform: rotate(-90deg) translate(-27%, -10706%);
 	}
-
-	/* &__line-three {
-		position: absolute;
-		height: 1px;
-		width: 157px;
-		top: -16px;
-		left: 34px;
-		background: $main-color;
-		transform: rotate(-90deg) translate(-27%, -9590%);
-	}
- */
 	&__item {
 		position: relative;
 		&:before {
@@ -88,7 +54,6 @@
 			transform: rotate(-216deg);
 		}
 	}
-
 	&__title {
 		position: relative;
 		text-align: center;
@@ -99,8 +64,7 @@
 			transform: translateX(-50%);
 		}
 	}
-
-	&__sibtitle {
+	&__subtitle {
 		text-align: center;
 	}
 	&__item {
@@ -108,7 +72,6 @@
 			position: relative;
 		}
 		&-icon {
-			/* top: 10px; */
 			transform: translate(0, 15%);
 
 			position: absolute;
@@ -121,13 +84,11 @@
 			}
 		}
 	}
-
 	&__finished {
 		margin-top: 45px;
 		margin-left: 56px;
 		width: 250px;
 	}
-
 	&__degree {
 		width: 250px;
 		margin-left: 56px;
@@ -138,26 +99,125 @@
 		span {
 			color: $main-color;
 			font-weight: 700;
+			font-size: 16px;
 		}
 	}
 	&__wrapper {
 		display: flex;
 		justify-content: center;
 	}
-
 	&__body {
 		width: 475px;
 		margin-top: 12px;
 		font-family: "Lato Medium";
 		font-size: 12px;
 		line-height: 18px;
-	}
-
-	/* &__column {
-		display: grid;
-		grid-template: minmax(1fr, auto) / 1fr;
-	} */
-	&__body {
 		color: $text-color;
+	}
+}
+@media (max-width: 768px) {
+	.education {
+		&__body {
+			width: 100%;
+		}
+		&__column {
+			&-title {
+				&::before {
+					left: 6px;
+				}
+			}
+		}
+		&__line {
+			&-two {
+				width: 170px;
+			}
+		}
+		&__item {
+			&:before {
+				top: 63px;
+				left: -148px;
+				transform: rotate(-218deg);
+				width: 166px;
+			}
+		}
+	}
+}
+@media (max-width: 575px) {
+	.education {
+		&__column {
+			&-title {
+				&:before {
+					content: "";
+					height: 16px;
+					top: 43%;
+				}
+			}
+		}
+		li {
+			&:after {
+				content: "";
+				width: 1px;
+				height: 150%;
+				position: absolute;
+				top: -53px;
+				left: 14px;
+				background-color: #91c9ff;
+			}
+		}
+		&__line {
+			&-two {
+				display: none;
+			}
+		}
+		&__item {
+			&:before {
+				top: 23px;
+				left: -46px;
+				transform: rotate(-218deg);
+				width: 51px;
+			}
+		}
+		&__column {
+			width: 100%;
+			margin: 0 10px 0 10px;
+		}
+		li {
+			padding-left: 55px;
+		}
+		&__finished {
+			width: 73%;
+		}
+		&__degree {
+			width: 82%;
+		}
+	}
+}
+@media (max-width: 530px) {
+	.education {
+		li {
+			&:after {
+				height: 143%;
+			}
+		}
+	}
+}
+@media (max-width: 433px) {
+	.education {
+		li {
+			&:after {
+				height: 137%;
+				top: -53px;
+			}
+		}
+	}
+}
+@media (max-width: 363px) {
+	.education {
+		li {
+			&:after {
+				height: 130%;
+				top: -53px;
+			}
+		}
 	}
 }

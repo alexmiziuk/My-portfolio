@@ -7,16 +7,16 @@ import './Sidepanel.scss'
 const Sidepanel = () => {
 	return (
 		<aside className='sidepanel'>
-			<a href="#" className="sidepanel__link">
-			<img /* className={Sidepanel.img} */
+			<a href="/#" className="sidepanel__link">
+			<img 
          alt={"facebook"}
          src={facebook}/></a>
-			<a href="#" className="sidepanel__link">
-			<img /* className={Sidepanel.img} */
+			<a href="/#" className="sidepanel__link">
+			<img 
          alt={"instagram"}
          src={instagram}/></a>
-			<a href="#" className="sidepanel__link">
-			<img /* className={Sidepanel.img} */
+			<a href="/#" className="sidepanel__link">
+			<img 
          alt={"github"}
          src={github}/></a>
 			<div className="sidepanel__divider">

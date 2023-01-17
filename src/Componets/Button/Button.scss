@@ -1,17 +1,10 @@
 @import "../Base/Variables.scss";
 
-/* .btn {
-	background: $main-color;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	padding: 12px 25px; 
-
-} */
 .center {
 	width: 180px;
 	height: 60px;
 	position: relative;
 }
-
 .btn {
 	display: flex;
 	flex-direction: row;
@@ -25,6 +18,11 @@
 	border: 1px solid $main-color;
 	outline: none;
 	transition: 1s ease-in-out;
+	span {
+		color: white;
+		font-size: 18px;
+		font-weight: 100;
+	}
 }
 
 svg {
@@ -47,8 +45,35 @@ svg {
 	stroke-dashoffset: -480;
 }
 
-.btn span {
-	color: white;
-	font-size: 18px;
-	font-weight: 100;
+@media (max-width:1200px) {
+	
 }
+ 
+ @media (max-width: 992px) {
+	.btn {
+		margin-top: 5px;
+		height: 50px;
+		svg {
+			stroke: none;
+		}
+		span {
+			font-size: 17px;
+			}
+		}
+	}
+ 
+@media (max-width: 768px) {
+	
+}
+ 
+ @media (max-width:576px) {
+	.btn {
+		margin-top: 10px;
+		height: 40px;
+		span {
+			font-size: 15px;
+			}
+ }
+}
+
+

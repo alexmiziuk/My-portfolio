@@ -20,9 +20,6 @@ function App() {
 
 	const [menuActive, setMenuActive] = useState(false)
 
-
-
-
 	return (
 		<div className="App">
 			<Sidepanel />
@@ -33,7 +30,7 @@ function App() {
 			<Education />
 			<Skills />
 			<Portfolio />
-			<Contacts />
+			 <Contacts />
 			<ArrowScrollUp />
 		</div>
 	);

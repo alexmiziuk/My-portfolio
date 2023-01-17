@@ -17,7 +17,7 @@ import Instagram from '../../Icons/contacts_icons/Instagram.svg';
 
 
 const Contacts = () => {
-	
+
 	useEffect(() => {
 		new WOW.WOW({
 			live: false
@@ -46,7 +46,7 @@ const Contacts = () => {
 					text: "Я обов'язково зв'яжуся з вами найближчим часом",
 					button: "Закрити",
 					className: "swal-title",
-				}) 
+				})
 				/* console.log(result.text); */
 				console.log("message sent")
 
@@ -69,7 +69,7 @@ const Contacts = () => {
 						<h2 className="title title-fz16 contacts__title" id='contactsid'>
 							Контакти
 						</h2>
-						<div className="wow animate__shakeX title title-fz36 contacts__subtitle" data-wow-duration="1.2s" data-wow-delay="1.5s">
+						<div className="wow animate__shakeX title title-fz48 contacts__subtitle" data-wow-duration="1.2s" data-wow-delay="1.5s">
 							Зв'яжіться зі мною
 						</div>
 						<div className="divider">
@@ -100,7 +100,7 @@ const Contacts = () => {
 						</div>
 						<form ref={form} onSubmit={sendEmail} className='contacts__form'>
 							<div className="contacts__input">
-								<input name='user_name' required='required' id='name' type="text" /* title="YOUR_WARNING_TEXT" */ />
+								<input name='user_name' required='required' id='name' type="text" />
 								<label htmlFor="name">Ваше ім'я</label>
 							</div>
 							<div className="contacts__input">
@@ -109,33 +109,19 @@ const Contacts = () => {
 							</div>
 							<div className="contacts__textarea">
 								<textarea name="message" required='required' id="text">
-
 								</textarea >
-								<label htmlFor="text">Ваше повіодомлення</label>
+								<label htmlFor="text">Ваше повідомлення</label>
 							</div>
 							<div className="center ">
 								<button type='submit' className="btn contacts__btn" onClick={() => setModalActive(!modalActive)}>
 									<svg width="245px" height="45px" viewBox="0 0 150 60" className="border boder_size">
-
 									</svg>
 									<span>Відправити повідомлення</span>
 								</button>
 							</div>
-
-							{/*  <div className={modalActive ? swal({
-								title: "Дякую за ваше повідомлення",
-								text: "Я обов'язково зв'яжуся з вами найближчим часом",
-								button: "Закрити",
-								className: "swal-title",
-							} ) : 'overlay__modal'}>
-								
-							</div>   */}
 						</form>
 					</div>
-
 				</div>
-
-
 			</div>
 		</section>
 	);

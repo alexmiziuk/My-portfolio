@@ -1,8 +1,7 @@
 import React from 'react';
 import './MyPromo.scss'
 import Button from '../Button/Button';
-/* import '../Button/Button.scss' */
-/* import Hamburger from '../Hamburger/Hamburger'; */
+
 
 
 
@@ -10,7 +9,6 @@ import Button from '../Button/Button';
 const MyPromo = () => {
 	return (
 		<section className="mypromo" id='mypromoid'>
-			{/* <Hamburger /> */}
 			<div className="container">
 				<div className="title title-fz16 mypromo__subtitle">
 					Мене звати Олександр Мізюк

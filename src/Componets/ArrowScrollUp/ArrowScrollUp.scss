@@ -12,7 +12,7 @@
 	height: 40px;
 	background-color: $background-color;
 	border-radius: 100%;
-	border: 2px solid  $main-color;
+	border: 2px solid $main-color;
 	opacity: 1;
 	visibility: visible;
 	transition: all 0.6s;
@@ -27,6 +27,20 @@
 	visibility: hidden;
 	bottom: -7%;
 	transition: all 0.6s;
-
 }
 
+@media screen and (max-width: 576px) {
+	.pageup {
+		right: 15px;
+		width: 36px;
+		height: 36px;
+		bottom: 30px;
+		opacity: 0.5;
+	}
+	.hidden {
+		opacity: 0;
+		visibility: hidden;
+		bottom: -7%;
+		transition: all 0.6s;
+	}
+}

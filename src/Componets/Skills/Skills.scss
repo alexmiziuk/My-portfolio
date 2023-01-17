@@ -1,9 +1,22 @@
 @import "../Base/Variables.scss";
-
+@import '../Base/Mixins.scss';
 .skills {
 	padding-top: 125px;
 	background: $background-color;
 	min-height: 490px;
+	&__item {
+		position: relative;
+		text-align: center;
+		@include before_circle;
+		&:before {
+			top: -6;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__subtitle {
+		text-align: center;
+	}
 	&__wrapper {
 		margin-top: 60px;
 		display: grid;
@@ -13,7 +26,7 @@
 	&__variety {
 		display: block;
 		background-color: #333;
-		padding: 30px 29px 25px 30px;
+		padding: 20px 15px 20px 15px;
 	}
 	&__img {
 		img {
@@ -35,5 +48,51 @@
 		font-family: "Lato Medium";
 		font-size: 12px;
 		line-height: 18px;
+	}
+}
+
+@media (max-width: 992px) {
+	.skills {
+		&__wrapper {
+			grid-template: repeat(2, minmax(310px, auto)) / repeat(3, 1fr);
+			row-gap: 12px;
+		}
+		&__boundary {
+			height: 100%;
+		}
+		.wow {
+			animation-name: none !important;
+			visibility: visible !important;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.skills {
+		&__variety {
+			padding: 15px 15px 15px 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.skills {
+		&__subtitle {
+			padding: 0 10px;
+		}
+		&__wrapper {
+			grid-template-rows: repeat(5, minmax(300px, auto));
+			grid-template-columns: 1fr;
+			row-gap: 12px;
+		}
+		&__variety {
+			margin: 0 20px;
+			&-fifth {
+				grid-column: auto;
+			}
+		}
+		&__boundary {
+			padding: 0 20px;
+		}
 	}
 }

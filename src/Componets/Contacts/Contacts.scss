@@ -9,10 +9,13 @@
 		display: grid;
 		grid-template-columns: 400px 585px;
 		justify-content: space-between;
+		column-gap: 20px;
 	}
 	&__photo {
 		img {
 			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 	&__descr {
@@ -48,15 +51,18 @@
 			width: 30px;
 		}
 	}
-
 	&__form {
 		margin-top: 30px;
 		display: grid;
 		grid-template: 45px 190px 45px / repeat(2, 280px);
 		justify-content: space-between;
-		row-gap: 30px;
+		row-gap: 27px;
 		color: white;
+		column-gap: 20px;
+
 		label {
+			display: block;
+			position: absolute;
 			font-family: "Lato Medium";
 			display: block;
 			position: absolute;
@@ -69,24 +75,24 @@
 	&__input {
 		position: relative;
 		input {
-			width: 238px;
+			width: 85%;
 			height: 100%;
 			padding: 0 20px;
 			font-size: 12px;
 		}
 	}
-
 	&__textarea {
+		position: relative;
 		grid-column: 1 / 3;
 		textarea {
-			width: 545px;
-			height: 80%;
+			width: 93%;
+			height: 78%;
 			resize: none;
 			padding: 20px;
 			font-size: 12px;
 		}
 		label {
-			top: 309px;
+			top: -17px;
 		}
 	}
 	&__btn {
@@ -99,57 +105,7 @@
 			height: 45px;
 		}
 	}
-	/* .overlay__modal {
-		position: fixed;
-		display: none;
-		width: 200%;
-		height: 100%;
-		left: -50%;
-		top: 0;
-		background-color: rgba(0, 0, 0, 0.56);
-	
-		
-		.modal {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 380px;
-			min-height: 175px;
-			background-color: white;
-			color: black;
-			padding: 38px 40px 40px 40px;
-			&__close {
-				position: absolute;
-				top: 0;
-				right: -40px;
-				font-size: 41px;
-				line-height: 21px;
-				color: $main-color;
-
-			}
-			&__subtitle {
-				color: #0d0d0d;
-				font-family: "Lato Bold";
-				font-size: 19px;
-				text-align: center;
-				line-height: 45px;
-			}
-			&__descr {
-				color: #0d0d0d;
-				font-family: "Lato Medium";
-				font-size: 15px;
-				text-align: center;
-				line-height: 35px;
-			}
-		}
-		
-	} */
-	/* .active {
-		display: block !important;
-	} */
 }
-
 .swal {
 	&-overlay {
 		background-color: rgb(0 0 0 / 78%);
@@ -157,7 +113,6 @@
 	&-modal {
 		padding: 16px 0;
 		border-radius: 0;
-
 	}
 	&-title {
 		font-family: "Lato Bold" !important;
@@ -175,7 +130,6 @@
 		appearance: none;
 	}
 	&-footer {
-	
 		background-color: rgb(245, 248, 250);
 		margin-top: 32px;
 		border-top: 1px solid #e9eef1;
@@ -183,3 +137,111 @@
 	}
 }
 
+@media (max-width: 1200px) {
+	.contacts {
+		&__photo {
+			width: 367px;
+			height: 100%;
+			img {
+				height: 600px;
+			}
+		}
+		&__form {
+			justify-content: normal;
+			column-gap: 15px;
+			grid-template: 45px 190px 45px / repeat(2, 1fr);
+		}
+		&__wrapper {
+			padding: 0px 2px 0 2px;
+			grid-template-columns: 385px 544px;
+			column-gap: 20px;
+		}
+		&__input {
+			input {
+				width: 220px;
+			}
+		}
+		&__textarea {
+			textarea {
+				width: 502px;
+			}
+		}
+		.center {
+			width: 246px;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.contacts {
+		&__wrapper {
+			padding: 0px 2px 0 2px;
+			grid-template-columns: 1fr;
+			justify-content: center;
+		}
+		&__input {
+			input {
+				width: 307px;
+			}
+		}
+		&__textarea {
+			textarea {
+				width: 675px;
+			}
+		}
+		&__photo {
+			display: none;
+		}
+		.center {
+			.btn {
+				&:hover {
+					transition: none;
+					background: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.contacts {
+		&__input input {
+			width: 217px;
+		}
+		&__textarea {
+			textarea {
+				width: 496px;
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.contacts {
+		&__wrapper {
+			padding: 0px 51px 0 10px;
+		}
+		&__form {
+			grid-template: 45px 45px 190px 45px / 1fr;
+		}
+		&__input {
+			justify-content: center;
+			grid-column: 1/2;
+			input {
+				width: 100%;
+				padding: 0 19px;
+			}
+		}
+		&__textarea {
+			justify-content: center;
+			label {
+				top: -17px;
+			}
+			grid-column: 1/2;
+			textarea {
+				width: 100%;
+				padding: 20px 20px;
+			}
+		}
+	}
+}
