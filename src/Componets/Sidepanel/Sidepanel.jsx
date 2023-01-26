@@ -1,24 +1,24 @@
 import React from 'react';
 import facebook from '../../Icons/social/facebook.svg'
 import instagram from '../../Icons/social/instagram.svg'
-import github from '../../Icons/social/github.svg'
+import Telegram from '../../Icons/social/telegram.svg'
 import './Sidepanel.scss'
 
 const Sidepanel = () => {
 	return (
 		<aside className='sidepanel'>
-			<a href="/#" className="sidepanel__link">
+			<a href='https://www.facebook.com/sasha.mizuk'  className="sidepanel__link">
 			<img 
          alt={"facebook"}
          src={facebook}/></a>
-			<a href="/#" className="sidepanel__link">
+			<a href='https://www.instagram.com/sumifares/' className="sidepanel__link">
 			<img 
          alt={"instagram"}
          src={instagram}/></a>
-			<a href="/#" className="sidepanel__link">
-			<img 
-         alt={"github"}
-         src={github}/></a>
+			<a href='https://t.me/AlexLikeJazz' className="sidepanel__link">
+			<img className='telegram'
+         alt={"Telegram"}
+         src={Telegram}/></a>
 			<div className="sidepanel__divider">
 
 			</div>

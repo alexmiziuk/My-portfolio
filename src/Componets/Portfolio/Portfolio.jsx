@@ -25,33 +25,33 @@ const Portfolio = () => {
 				</div>
 				<div className="portfolio__wrapper">
 					<div className='portfolio__efect' id='first'>
-						<a href="/#" className="portfolio__item">
+						<a href="/#nameOfId" className="portfolio__item">
 							<img src={Business}
-								alt={"uber"} />
+								alt={"Business"} />
 						</a>
 					</div>
 					<div className='portfolio__efect' id='second'>
-						<a href="/#" className="portfolio__item">
+						<a href="/#nameOfId" className="portfolio__item">
 							<img src={City}
-								alt={"pulse"} />
+								alt={"City"} />
 						</a>
 					</div>
 					<div className='portfolio__efect' id='three'>
-						<a href="/#" className="portfolio__item">
+						<a href="/#nameOfId" className="portfolio__item">
 							<img src={Interior}
-								alt={"bread"} />
+								alt={"Interior"} />
 						</a>
 					</div>
 					<div className='portfolio__efect' id='fourth'>
-						<a href="/#" className="portfolio__item ">
+						<a href="/#nameOfId" className="portfolio__item ">
 							<img className='vertical'src={Nature}
-								alt={"plans"} />
+								alt={"Nature"} />
 						</a>
 					</div>
 					<div className='portfolio__efect' id='fifth'>
-						<a href="/#" className="portfolio__item">
+						<a href="/#nameOfId" className="portfolio__item">
 							<img src={Tehnology}
-								alt={"ipad"} />
+								alt={"Tehnology"} />
 						</a>
 					</div>
 				</div>

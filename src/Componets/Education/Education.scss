@@ -111,7 +111,7 @@
 		margin-top: 12px;
 		font-family: "Lato Medium";
 		font-size: 12px;
-		line-height: 18px;
+		line-height: 19px;
 		color: $text-color;
 	}
 }
@@ -129,15 +129,17 @@
 		}
 		&__line {
 			&-two {
-				width: 170px;
+				width: 175px;
+				left: 34px;
+				top: -11px;
 			}
 		}
 		&__item {
 			&:before {
-				top: 63px;
-				left: -148px;
-				transform: rotate(-218deg);
-				width: 166px;
+				top: 64px;
+				left: -153px;
+				transform: rotate(-222deg);
+				width: 175px;
 			}
 		}
 	}

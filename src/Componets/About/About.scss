@@ -14,7 +14,7 @@
 		position: absolute;
 		column-gap: 70px;
 		margin-top: 120px;
-		height: 600px;
+		height: 630px;
 		grid-template: minmax(243px, auto) minmax(357px, auto) / 400px 570px;
 	}
 
@@ -33,7 +33,7 @@
 	&__text {
 		font-family: "Lato Medium";
 		font-size: 14px;
-		line-height: 21px;
+		line-height: 22px;
 		margin-top: 16px;
 		color: $text-color;
 		span {
@@ -74,7 +74,7 @@
 		&-tech {
 			margin-top: 6px;
 			font-size: 12px;
-			line-height: 18px;
+			line-height: 19px;
 			color: $text-color;
 			font-family: "Lato Medium";
 		}
@@ -87,7 +87,7 @@
 		&__block {
 			column-gap: 34px;
 			grid-template-columns: 400px 525px;
-			height: 622px;
+			height: 635px;
 		}
 		&__inform {
 			padding-right: 4px;
@@ -125,9 +125,7 @@
 @media (max-width: 768px) {
 	.about {
 		min-height: 743px;
-		&__text {
-			line-height: 20px;
-		}
+		
 		&__block {
 			grid-template: minmax(228px, auto) minmax(357px, auto) / 219px 324px;
 			min-height: 606px;
