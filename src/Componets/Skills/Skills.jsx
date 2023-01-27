@@ -3,13 +3,15 @@ import WOW from 'wowjs';
 import { useEffect } from 'react';
 
 import './Skills.scss';
+import '../Animate/Animate.css';
+
 import IconeCss from '../../Icons/skills/css.svg';
 import IconeHtml from '../../Icons/skills/html.svg';
 import IconeJQ from '../../Icons/skills/jq.svg';
 import IconeJS from '../../Icons/skills/js.svg';
 import IconeReact from '../../Icons/skills/atom.svg';
 import Skills_ from '../../Image/skills.png';
-import '../Animate/Animate.css';
+
 
 const Skills = () => {
 	useEffect(() => {

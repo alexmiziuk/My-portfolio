@@ -306,6 +306,7 @@
 				width: 496px;
 			}
 		}
+		
 		&__agreement {
 			font-size: 11px;
 		}
@@ -342,6 +343,10 @@
 				height: 79%;
 				padding: 20px 20px;
 			}
+		}
+		&__checkbox {
+			height: 15px;
+			width: 15px;
 		}
 		&__agreement {
 			font-size: 11px;

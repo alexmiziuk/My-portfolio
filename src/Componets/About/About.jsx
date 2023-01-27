@@ -3,10 +3,12 @@ import WOW from 'wowjs';
 import { useEffect } from 'react';
 
 import './About.scss';
+import '../Animate/Animate.css';
+
 import Developer from '../../Icons/about_me/dvr_white_24dp.svg';
 import Devices from '../../Icons/about_me/devices_white_24dp.svg';
 import Design from '../../Icons/about_me/design_white_24dp.svg'
-import '../Animate/Animate.css';
+
 
 const About = () => {
 	useEffect(() => {

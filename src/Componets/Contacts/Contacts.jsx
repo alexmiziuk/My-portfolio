@@ -4,6 +4,7 @@ import WOW from 'wowjs';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import swal from 'sweetalert';
+
 import { ArrowScrollUp } from '../ArrowScrollUp/ArrowScrollUp';
 
 
@@ -141,15 +142,15 @@ const Contacts = ({privacyPolicy, setPrivacyPolicy}) => {
 						</div>
 						<form ref={form} onSubmit={sendEmail} className='contacts__form'>
 							<div className="contacts__input">
-								<input name='user_name' required='required' id='name' type="text" />
+								<input name='user_name' required='required' id='name' type="text" maxlength='50' />
 								<label htmlFor="name">Ваше ім'я</label>
 							</div>
 							<div className="contacts__input">
-								<input name="user_email" required='required' id='email' type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+								<input name="user_email" required='required' id='email' type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxlength='50' />
 								<label htmlFor="email">Ваша пошта</label>
 							</div>
 							<div className="contacts__textarea">
-								<textarea name="message" id="text">
+								<textarea maxlength='2000' name="message" id="text">
 								</textarea >
 								<label htmlFor="text">Ваше повідомлення</label>
 							</div>
@@ -166,7 +167,7 @@ const Contacts = ({privacyPolicy, setPrivacyPolicy}) => {
 								</div> : ''}
 							</div>
 							<div className="contacts__privacy">
-								<input type="checkbox" required='required' />
+								<input className='contacts__checkbox' type="checkbox" required='required' />
 								<span className='contacts__agreement' id='link'>Я згоден(а) із <a  href= "/#privacy" className='button__privacy' onClick={() =>  setPrivacyPolicy(!privacyPolicy)}>політикою конфіденційності</a></span>
 
 							</div>

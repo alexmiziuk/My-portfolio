@@ -8,7 +8,7 @@ import './Education.scss';
 import Icons from '../../Icons/experience/education_white_24dp.svg';
 import Webicon from '../../Icons/experience/cast_for_education_white_24dp.svg';
 import Udemiicon from '../../Icons/experience/developer_board_white_24dp.svg';
-
+import Study from '../../Image/education__code1.png'
 
 const Education = () => {
 	useEffect(() => {
@@ -33,12 +33,17 @@ const Education = () => {
 					<span></span>
 				</div>
 				<div className="education__wrapper">
+					<div className="education__box wow animate__rotateInDownLeft" data-wow-duration="1.5s" data-wow-delay="0s">
+						<img className="education__img" src={Study} alt="study" /><span>
+						</span>
+					</div>
+
 					<div className="education__column">
-						<h3 className=" title title-fz20 education__column-title wow animate__rotateInDownLeft"
-							data-wow-duration="1.5s" data-wow-delay="0s" id='first'>
+						<h3 className=" title title-fz20 education__column-title"
+							id='first'>
 							Навчання
 						</h3>
-						<ul> 
+						<ul>
 							<li>
 								<div className="education__line-one">
 									<span>
@@ -116,6 +121,7 @@ const Education = () => {
 							</li>
 						</ul>
 					</div>
+
 				</div>
 			</div>
 		</section>

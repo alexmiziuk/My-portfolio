@@ -2,7 +2,7 @@
 @import "../Base/Mixins.scss";
 
 .about {
-	min-height: 720px;
+	min-height: 748px;
 
 	background-color: $background-color;
 	&__img {
@@ -29,7 +29,7 @@
 		z-index: 2;
 		@include before_circle;
 	}
-	
+
 	&__text {
 		font-family: "Lato Medium";
 		font-size: 14px;
@@ -70,7 +70,7 @@
 			transform: translate(52%, -15%);
 		}
 	}
-	&__content{
+	&__content {
 		&-tech {
 			margin-top: 6px;
 			font-size: 12px;
@@ -81,9 +81,15 @@
 	}
 }
 
+@media (max-width: 1282px) {
+	.about {
+		height: 752px;
+	}
+}
+
 @media (max-width: 1200px) {
 	.about {
-		height: 742px;
+		height: 758px;
 		&__block {
 			column-gap: 34px;
 			grid-template-columns: 400px 525px;
@@ -100,8 +106,10 @@
 }
 
 @media (max-width: 992px) {
+	.mypromo {
+		height: 77vh;
+	}
 	.about {
-		height: inherit;
 		&__block {
 			grid-template: minmax(228px, auto) minmax(357px, auto) / 300px 390px;
 			column-gap: 15px;
@@ -125,7 +133,7 @@
 @media (max-width: 768px) {
 	.about {
 		min-height: 743px;
-		
+
 		&__block {
 			grid-template: minmax(228px, auto) minmax(357px, auto) / 219px 324px;
 			min-height: 606px;
@@ -154,6 +162,9 @@
 }
 
 @media (max-width: 576px) {
+	.mypromo {
+		height: 86vh;
+	}
 	.about {
 		min-height: 1031px;
 		&__block {
@@ -178,6 +189,9 @@
 @media (max-width: 525px) {
 	.about {
 		min-height: 1022px;
+		&__block {
+			padding-right: 14px;
+		}
 	}
 }
 
@@ -194,17 +208,22 @@
 
 @media (max-width: 400px) {
 	.about {
-		min-height: 1094px;
+		min-height: 1111px;
 	}
 }
 
 @media (max-width: 384px) {
 	.about {
-		min-height: 1142px;
+		min-height: 1156px;
+	}
+}
+@media (max-width: 361px) {
+	.mypromo {
+		height: 70vh;
 	}
 }
 @media (max-width: 350px) {
 	.about {
-		min-height: 1178px;
+		min-height: 1214px;
 	}
 }

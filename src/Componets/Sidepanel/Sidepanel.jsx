@@ -1,8 +1,11 @@
 import React from 'react';
+
+import './Sidepanel.scss'
+
 import facebook from '../../Icons/social/facebook.svg'
 import instagram from '../../Icons/social/instagram.svg'
 import Telegram from '../../Icons/social/telegram.svg'
-import './Sidepanel.scss'
+
 
 const Sidepanel = () => {
 	return (

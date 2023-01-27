@@ -1,6 +1,7 @@
 import React from 'react';
-import './MyPromo.scss'
 import Button from '../Button/Button';
+import './MyPromo.scss'
+
 
 
 
