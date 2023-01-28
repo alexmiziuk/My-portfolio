@@ -9,6 +9,9 @@ import Icons from '../../Icons/experience/education_white_24dp.svg';
 import Webicon from '../../Icons/experience/cast_for_education_white_24dp.svg';
 import Udemiicon from '../../Icons/experience/developer_board_white_24dp.svg';
 import Study from '../../Image/education__code1.png'
+import personWalk from '../../Icons/education/Person__walk.svg'
+import person__reverse from '../../Icons/education/person__reverse.svg'
+import personTransporant from '../../Icons/education/Persone__run.svg'
 
 const Education = () => {
 	useEffect(() => {
@@ -44,7 +47,7 @@ const Education = () => {
 							Навчання
 						</h3>
 						<ul>
-							<li>
+						<li>
 								<div className="education__line-one">
 									<span>
 									</span>
@@ -55,6 +58,7 @@ const Education = () => {
 								</div>
 								<div className="education__line-three"></div>
 								<div className="education__item">
+									<img className='education__direction education__direction-position' src={person__reverse} alt='persone__reverse'></img>
 									<div className="education__item-head">
 										<div className="education__item-icon">
 											<img src={Icons} alt={'university'} />
@@ -80,6 +84,8 @@ const Education = () => {
 								</div>
 								<div className="education__line-three"></div>
 								<div className="education__item">
+
+									<img className='education__direction' src={personWalk} alt='persone__walk'></img>
 									<div className="education__item-head">
 										<div className="education__item-icon">
 											<img src={Webicon} alt={'Web-developer'} />
@@ -105,6 +111,7 @@ const Education = () => {
 								</div>
 								<div className="education__line-three"></div>
 								<div className="education__item">
+									<img className='education__direction' src={personTransporant} alt='persone__transporant'></img>
 									<div className="education__item-head">
 										<div className="education__item-icon">
 											<img src={Udemiicon} alt={'udemi'} />
@@ -119,6 +126,7 @@ const Education = () => {
 									</div>
 								</div>
 							</li>
+							
 						</ul>
 					</div>
 

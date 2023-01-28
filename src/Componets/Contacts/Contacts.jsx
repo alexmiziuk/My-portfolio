@@ -142,15 +142,15 @@ const Contacts = ({privacyPolicy, setPrivacyPolicy}) => {
 						</div>
 						<form ref={form} onSubmit={sendEmail} className='contacts__form'>
 							<div className="contacts__input">
-								<input name='user_name' required='required' id='name' type="text" maxlength='50' />
+								<input name='user_name' required='required' id='name' type="text" maxLength='50' />
 								<label htmlFor="name">Ваше ім'я</label>
 							</div>
 							<div className="contacts__input">
-								<input name="user_email" required='required' id='email' type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxlength='50' />
+								<input name="user_email" required='required' id='email' type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxLength='50' />
 								<label htmlFor="email">Ваша пошта</label>
 							</div>
 							<div className="contacts__textarea">
-								<textarea maxlength='2000' name="message" id="text">
+								<textarea maxLength='2000' name="message" id="text">
 								</textarea >
 								<label htmlFor="text">Ваше повідомлення</label>
 							</div>
