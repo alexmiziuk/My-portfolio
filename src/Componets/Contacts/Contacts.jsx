@@ -25,7 +25,7 @@ import Github from '../../Icons/contacts_icons/github.svg';
 
 
 
-const Contacts = ({privacyPolicy, setPrivacyPolicy}) => {
+const Contacts = ({ privacyPolicy, setPrivacyPolicy }) => {
 
 	useEffect(() => {
 		new WOW.WOW({
@@ -81,7 +81,7 @@ const Contacts = ({privacyPolicy, setPrivacyPolicy}) => {
 			);
 	};
 	return (
-		<section className={privacyPolicy? 'contacts unvisibal': 'contacts'} >
+		<section className={privacyPolicy ? 'contacts unvisibal' : 'contacts'} >
 			<div className="container">
 				<div className="contacts__wrapper">
 					<div className="contacts__photo">
@@ -141,19 +141,22 @@ const Contacts = ({privacyPolicy, setPrivacyPolicy}) => {
 							Або залиште ваші дані, я сам вам напишу
 						</div>
 						<form ref={form} onSubmit={sendEmail} className='contacts__form'>
-							<div className="contacts__input">
+							<div className='contacts__input'>
 								<input name='user_name' required='required' id='name' type="text" maxLength='50' />
 								<label htmlFor="name">Ваше ім'я</label>
 							</div>
-							<div className="contacts__input">
+							<div className='contacts__input'>
+								
 								<input name="user_email" required='required' id='email' type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxLength='50' />
 								<label htmlFor="email">Ваша пошта</label>
 							</div>
-							<div className="contacts__textarea">
-								<textarea maxLength='2000' name="message" id="text">
+							<div className='contacts__textarea'>
+								<textarea className='contacts__textarea' maxLength='2000' name="message" id="text">
 								</textarea >
-								<label htmlFor="text">Ваше повідомлення</label>
+								<label className='contacts__label' htmlFor="text">Ваше повідомлення</label>
 							</div>
+
+
 							<div className="center " >
 								<button className="btn contacts__btn" onClick={fetchData}>
 									{isLoading ? "" :
@@ -168,7 +171,7 @@ const Contacts = ({privacyPolicy, setPrivacyPolicy}) => {
 							</div>
 							<div className="contacts__privacy">
 								<input className='contacts__checkbox' type="checkbox" required='required' />
-								<span className='contacts__agreement' id='link'>Я згоден(а) із <a  href= "/#privacy" className='button__privacy' onClick={() =>  setPrivacyPolicy(!privacyPolicy)}>політикою конфіденційності</a></span>
+								<span className='contacts__agreement' id='link'>Я згоден(а) із <a href="/#privacy" className='button__privacy' onClick={() => setPrivacyPolicy(!privacyPolicy)}>політикою конфіденційності</a></span>
 
 							</div>
 							<ArrowScrollUp />

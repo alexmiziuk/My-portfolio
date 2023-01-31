@@ -2,25 +2,18 @@
 @import "../Base/Mixins.scss";
 
 .about {
-	min-height: 748px;
-
-	background-color: $background-color;
 	&__img {
 		grid-row: 1/3;
 		background: url("../../Image/about-bg.jpg") no-repeat 50% / cover;
 	}
 	&__block {
 		display: grid;
-		position: absolute;
+		position: relative;
 		column-gap: 70px;
 		margin-top: 120px;
-		height: 630px;
-		grid-template: minmax(243px, auto) minmax(357px, auto) / 400px 570px;
+		grid-template: minmax(290px, auto) / 400px 570px;
 	}
-
-	&__inform {
-		padding: 11px 9px 7px 0;
-	}
+	
 	& .title_fz16 {
 		padding-left: 12px;
 	}
@@ -48,8 +41,8 @@
 		}
 	}
 	&__technologies {
-		margin-top: 68px;
 		display: grid;
+		margin-top: 35px;
 		position: relative;
 		grid-template: repeat(2, minmax(116px, auto)) / repeat(2, 264px);
 		gap: 22px 40px;
@@ -81,22 +74,11 @@
 	}
 }
 
-@media (max-width: 1282px) {
-	.about {
-		height: 752px;
-	}
-}
-
 @media (max-width: 1200px) {
 	.about {
-		height: 758px;
 		&__block {
 			column-gap: 34px;
 			grid-template-columns: 400px 525px;
-			height: 635px;
-		}
-		&__inform {
-			padding-right: 4px;
 		}
 		&__technologies {
 			gap: 20px 20px;
@@ -106,14 +88,10 @@
 }
 
 @media (max-width: 992px) {
-	.mypromo {
-		height: 77vh;
-	}
 	.about {
 		&__block {
 			grid-template: minmax(228px, auto) minmax(357px, auto) / 300px 390px;
 			column-gap: 15px;
-			height: 600px;
 		}
 		&__technologies {
 			gap: 12px 20px;
@@ -132,15 +110,10 @@
 
 @media (max-width: 768px) {
 	.about {
-		min-height: 743px;
-
 		&__block {
 			grid-template: minmax(228px, auto) minmax(357px, auto) / 219px 324px;
-			min-height: 606px;
-			row-gap: 37px;
-		}
-		&__img {
-			height: 358px;
+			justify-content: center;
+			row-gap: 12px;
 		}
 		&__icon {
 			&:before {
@@ -162,16 +135,12 @@
 }
 
 @media (max-width: 576px) {
-	.mypromo {
-		height: 86vh;
-	}
 	.about {
-		min-height: 1031px;
 		&__block {
-			grid-template: 340px 1fr 1fr/1fr;
+			grid-template: 1fr 1fr 1fr/1fr;
 			column-gap: 0;
 			margin-top: 30px;
-			padding: 0 10px 0 10px;
+			/* padding: 0 10px 0 10px; */
 		}
 		&__img {
 			grid-row: 1/2;
@@ -179,51 +148,5 @@
 		&__technologies {
 			grid-template: repeat(3, minmax(99px, auto)) / 1fr;
 		}
-		&__inform {
-			padding-right: 0px;
-			padding-bottom: 0;
-		}
-	}
-}
-
-@media (max-width: 525px) {
-	.about {
-		min-height: 1022px;
-		&__block {
-			padding-right: 14px;
-		}
-	}
-}
-
-@media (max-width: 480px) {
-	.about {
-		min-height: 1022px;
-	}
-}
-@media (max-width: 454px) {
-	.about {
-		min-height: 1092px;
-	}
-}
-
-@media (max-width: 400px) {
-	.about {
-		min-height: 1111px;
-	}
-}
-
-@media (max-width: 384px) {
-	.about {
-		min-height: 1156px;
-	}
-}
-@media (max-width: 361px) {
-	.mypromo {
-		height: 70vh;
-	}
-}
-@media (max-width: 350px) {
-	.about {
-		min-height: 1214px;
 	}
 }

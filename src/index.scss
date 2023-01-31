@@ -25,14 +25,13 @@
 }
 
 html {
-	font-family: "Lato", sans-serif;
+	/* font-family: "Lato", sans-serif; */
+	background-color: $background-color;
 }
 
 a:not([class]) {
 	text-decoration-skip-ink: auto;
 }
-
-
 
 .divider {
 	span {
@@ -43,4 +42,3 @@ a:not([class]) {
 		margin: 25px auto 0 auto;
 	}
 }
-

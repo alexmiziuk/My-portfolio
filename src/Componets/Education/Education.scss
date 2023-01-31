@@ -2,7 +2,6 @@
 @import "../Base/Mixins.scss";
 
 .education {
-	background-color: $background-color;
 	padding-top: 120px;
 	&__column {
 		display: flex;
@@ -180,7 +179,7 @@
 		}
 		&__column {
 			&-title {
-				&::before {
+				&:before {
 					left: 6px;
 				}
 			}
@@ -211,6 +210,7 @@
 @media (max-width: 575px) {
 	.education {
 		&__column {
+			width: 100%;
 			&-title {
 				&:before {
 					content: "";
@@ -243,10 +243,7 @@
 				width: 51px;
 			}
 		}
-		&__column {
-			width: 100%;
-			margin: 0 10px 0 10px;
-		}
+	
 		li {
 			padding-left: 55px;
 		}

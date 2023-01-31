@@ -2,19 +2,17 @@
 
 .mypromo {
 	height: 72vh;
+	padding-top: 205px;
 	position: relative;
 	background: url("../../Image/main-bg2.png") no-repeat 50% / cover;
-	padding-top: 205px;
-
-	&__title {
-		width: 450px;
-		margin-top: 10px;
-	}
-
 	&__subtitle {
 		position: relative;
 		z-index: 2;
 		@include before_circle;
+	}
+	&__title {
+		width: 450px;
+		margin-top: 10px;
 	}
 
 	&__btns {
@@ -53,12 +51,8 @@
 
 @media (max-width: 576px) {
 	.mypromo {
-		background: url(http://localhost:3000/static/media/main-bg2.6d6257756790d8aeaa53.png) no-repeat 59% / cover;
-		&__subtitle {
-			margin-left: 10px;
-		}
+		background: url("../../Image/main-bg2.png") no-repeat 59% / cover;
 		&__title {
-			margin-left: 10px;
 			width: 272px;
 		}
 		&__btns {

@@ -2,7 +2,6 @@
 @import '../Base/Mixins.scss';
 .skills {
 	padding-top: 125px;
-	background: $background-color;
 	min-height: 490px;
 	&__item {
 		position: relative;
@@ -78,9 +77,6 @@
 
 @media screen and (max-width: 576px) {
 	.skills {
-		&__subtitle {
-			padding: 0 10px;
-		}
 		&__wrapper {
 			grid-template-rows: repeat(5, minmax(300px, auto));
 			grid-template-columns: 1fr;
