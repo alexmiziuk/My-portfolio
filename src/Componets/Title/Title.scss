@@ -21,6 +21,16 @@
 	}
 }
 
+@media screen and (max-width: 992px) {
+	.title {
+		&-fz14 {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	
+}
+
 @media screen and (max-width: 768px) {
 	.title {
 		&-fz48 {
@@ -30,10 +40,10 @@
 	}
 }
 
-@media (max-width: 525px) {
+/* @media (max-width: 525px) {
 	.title {
 		&-fz48 {
 			font-size: 30px;
 		}
 	}
-}
+} */

@@ -19,9 +19,9 @@
 	outline: none;
 	transition: 1s ease-in-out;
 	span {
+		font-family: "Lato Medium";
 		color: white;
 		font-size: 18px;
-		font-weight: 100;
 	}
 }
 
@@ -45,35 +45,35 @@ svg {
 	stroke-dashoffset: -480;
 }
 
-@media (max-width:1200px) {
-	
-}
- 
- @media (max-width: 992px) {
+
+
+@media (max-width: 992px) {
 	.btn {
+		background: #2357ac !important;
 		margin-top: 5px;
 		height: 50px;
+		/* &:hover {
+			background: #2357ac;
+		} */
 		svg {
 			stroke: none;
 		}
 		span {
 			font-size: 17px;
-			}
 		}
 	}
- 
-@media (max-width: 768px) {
-	
 }
- 
- @media (max-width:576px) {
+
+
+@media (max-width: 576px) {
 	.btn {
+		&:hover {
+			background: #2357ac;
+		}
 		margin-top: 10px;
 		height: 40px;
 		span {
 			font-size: 15px;
-			}
- }
+		}
+	}
 }
-
-

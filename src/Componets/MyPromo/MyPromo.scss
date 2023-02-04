@@ -4,7 +4,7 @@
 	height: 72vh;
 	padding-top: 205px;
 	position: relative;
-	background: url("../../Image/main-bg2.png") no-repeat 50% / cover;
+	background: url("../../Image/Back__colour.jpg") no-repeat 50% / cover;
 	&__subtitle {
 		position: relative;
 		z-index: 2;
@@ -51,9 +51,9 @@
 
 @media (max-width: 576px) {
 	.mypromo {
-		background: url("../../Image/main-bg2.png") no-repeat 59% / cover;
+		background: url("../../Image/Back__colour.jpg") no-repeat 59% / cover;
 		&__title {
-			width: 272px;
+			width: 87%;
 		}
 		&__btns {
 			margin-top: 30px;
@@ -61,5 +61,11 @@
 		.btn {
 			margin-left: 10px;
 		}
+	}
+}
+
+@media (max-width: 362px) {
+	.mypromo {
+		background: url("../../Image/Back__colour.jpg") no-repeat 61% / cover;
 	}
 }

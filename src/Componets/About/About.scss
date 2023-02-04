@@ -93,6 +93,10 @@
 			grid-template: minmax(228px, auto) minmax(357px, auto) / 300px 390px;
 			column-gap: 15px;
 		}
+		&__text {
+			font-size: 16px;
+			line-height: 24px;
+		}
 		&__technologies {
 			gap: 12px 20px;
 			grid-template: repeat(3, minmax(116px, auto)) / repeat(1, 390px);
@@ -104,6 +108,9 @@
 		}
 		&__content {
 			grid-column: 1/3;
+			&-tech {
+				font-size: 14px;
+			}
 		}
 	}
 }
@@ -140,7 +147,6 @@
 			grid-template: 1fr 1fr 1fr/1fr;
 			column-gap: 0;
 			margin-top: 30px;
-			/* padding: 0 10px 0 10px; */
 		}
 		&__img {
 			grid-row: 1/2;

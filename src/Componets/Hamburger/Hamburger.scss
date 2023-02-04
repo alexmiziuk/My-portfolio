@@ -17,11 +17,12 @@
 		display: block;
 		width: 30px;
 		height: 3px;
-		background: $main-color;
+		background: white; 
+		border-color: $main-color;
 	}
 	&:hover {
 		span.right {
-			background: white;
+			background: $main-color;
 			transition: 0.6s ease-in-out;
 		}
 	}
@@ -29,11 +30,11 @@
 		display: block;
 		width: 30px;
 		height: 3px;
-		background: $main-color;
+		background: white;
 	}
 	&:hover {
 		span.left {
-			background: white;
+			background: $main-color;
 			transition: 0.6s ease-in-out;
 		}
 	}
@@ -41,11 +42,11 @@
 		display: block;
 		width: 36px;
 		height: 3px;
-		background: $main-color;
+		background: white;
 	}
 	&:hover {
 		span.long {
-			background: white;
+			background: $main-color;
 			transition: 0.6s ease-in-out;
 		}
 	}
