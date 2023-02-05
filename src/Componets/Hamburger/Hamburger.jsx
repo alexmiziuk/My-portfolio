@@ -1,7 +1,10 @@
  import React from 'react';
 import './Hamburger.scss'
 
-const Hamburger = ({menuActive, setMenuActive}) => {
+
+
+const Hamburger = ({ menuActive, setMenuActive }) => {
+	menuActive ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
 	return (
 		<div>
 			<div className="hamburger" onClick={() => setMenuActive(!menuActive)}>
