@@ -1,4 +1,4 @@
- @import '../Base/Variables.scss';
+@import "../Base/Variables.scss";
 
 .hamburger {
 	position: absolute;
@@ -11,18 +11,16 @@
 	align-items: flex-end;
 	z-index: 9;
 	cursor: pointer;
-
-	
 	span.right {
 		display: block;
 		width: 30px;
 		height: 3px;
-		background: white; 
+		background: white;
 		border-color: $main-color;
 	}
 	&:hover {
 		span.right {
-			background: $main-color;
+			width: 25px;
 			transition: 0.6s ease-in-out;
 		}
 	}
@@ -34,7 +32,7 @@
 	}
 	&:hover {
 		span.left {
-			background: $main-color;
+			width: 25px;
 			transition: 0.6s ease-in-out;
 		}
 	}
@@ -46,16 +44,14 @@
 	}
 	&:hover {
 		span.long {
-			background: $main-color;
+			width: 31px;
 			transition: 0.6s ease-in-out;
 		}
 	}
 }
- 
+
 @media screen and (max-width: 576px) {
-	.hamburger{
+	.hamburger {
 		right: 15px;
 	}
 }
-
-

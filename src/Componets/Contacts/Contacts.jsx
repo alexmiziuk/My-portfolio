@@ -7,10 +7,8 @@ import swal from 'sweetalert';
 
 import { ArrowScrollUp } from '../ArrowScrollUp/ArrowScrollUp';
 
-
 import './Contacts.scss';
 import '../Animate/Animate.css';
-
 
 import ImgContacts from '../../Image/photo_contacts.jpg';
 import Facebook from '../../Icons/contacts_icons/Facebook.svg';
@@ -20,10 +18,6 @@ import Linkeden from '../../Icons/contacts_icons/linkeden.svg';
 import Viber from '../../Icons/contacts_icons/viber.svg';
 import WhatSapp from '../../Icons/contacts_icons/whatsapp.svg';
 import Github from '../../Icons/contacts_icons/github.svg';
-
-
-
-
 
 const Contacts = ({ privacyPolicy, setPrivacyPolicy }) => {
 

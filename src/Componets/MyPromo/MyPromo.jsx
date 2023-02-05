@@ -2,11 +2,6 @@ import React from 'react';
 import Button from '../Button/Button';
 import './MyPromo.scss'
 
-
-
-
-
-
 const MyPromo = () => {
 	return (
 		<section className="mypromo" id='mypromoid'>
