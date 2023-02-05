@@ -33,7 +33,7 @@ function App() {
 			<Portfolio />
 			<Contacts privacyPolicy={privacyPolicy} setPrivacyPolicy={setPrivacyPolicy}/>
 			<Privacy privacy={privacyPolicy} setPrivacy={setPrivacyPolicy} />
-		</div>
+			</div>
 	);
 }
 
