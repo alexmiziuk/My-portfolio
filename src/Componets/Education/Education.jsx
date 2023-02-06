@@ -91,7 +91,7 @@ const Education = () => {
 											<img src={Webicon} alt={'Web-developer'} />
 										</div>
 										<h4 className='title title-fz14 education__finished'>
-											Udemi
+											Udemy
 										</h4>
 										<div className="education__degree">Курс по Web-розробці <span>|</span> Курс по JavaScript</div>
 										<div className="education__body">
@@ -117,7 +117,7 @@ const Education = () => {
 											<img src={Udemiicon} alt={'udemi'} />
 										</div>
 										<h4 className='title title-fz14 education__finished'>
-											Udemi
+											Udemy
 										</h4>
 										<div className="education__degree">Курс по React</div>
 										<div className="education__body">
