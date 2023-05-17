@@ -3,7 +3,7 @@ import React from 'react';
 import './Portfolio.scss';
 import '../Animate/Animate.css';
 
-import Business from '../../Image/works/business1.jpg';
+import coffeeShop from '../../Image/works/pleasure-bg.png';
 import City from '../../Image/works/city.jpg';
 import Interior from '../../Image/works/Interior.jpg';
 import Nature from '../../Image/works/nature.jpg';
@@ -25,8 +25,8 @@ const Portfolio = () => {
 				</div>
 				<div className="portfolio__wrapper">
 					<div className='portfolio__efect' id='first'>
-						<a href="/#nameOfId" className="portfolio__item">
-							<img src={Business}
+						<a href="https://coffee-shop-4eca7.web.app/" className="portfolio__item">
+							<img src={coffeeShop}
 								alt={"Business"} />
 						</a>
 					</div>
