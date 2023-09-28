@@ -4,7 +4,7 @@ import './Portfolio.scss';
 import '../Animate/Animate.css';
 
 import coffeeShop from '../../Image/works/pleasure-bg.png';
-import City from '../../Image/works/city.jpg';
+import CarWash from '../../Image/works/isckraCarWash.jpg';
 import Interior from '../../Image/works/Interior.jpg';
 import Nature from '../../Image/works/nature.jpg';
 import Tehnology from '../../Image/works/tehnology.jpg';
@@ -31,9 +31,9 @@ const Portfolio = () => {
 						</a>
 					</div>
 					<div className='portfolio__efect' id='second'>
-						<a href="/#nameOfId" className="portfolio__item">
-							<img src={City}
-								alt={"City"} />
+						<a href="https://65154654692f1e7516f78496--sparkly-frangipane-0ae6f3.netlify.app/" className="portfolio__item">
+							<img src={CarWash}
+								alt={"Car Wash"} />
 						</a>
 					</div>
 					<div className='portfolio__efect' id='three'>
