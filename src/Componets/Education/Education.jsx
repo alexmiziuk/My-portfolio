@@ -13,7 +13,7 @@ import personWalk from '../../Icons/education/Person__walk.svg'
 import person__reverse from '../../Icons/education/person__reverse.svg'
 import personTransporant from '../../Icons/education/Persone__run.svg'
 
-const Education = () => {
+const Education = ({ getAllTextsOfSite }) => {
 	useEffect(() => {
 		new WOW.WOW({
 			live: false
@@ -23,15 +23,14 @@ const Education = () => {
 		<section className='education' >
 			<div className="container">
 				<h2 className="title title-fz16 education__title" id='educationid'>
-					Освіта
+					{getAllTextsOfSite("educationSubTitle")}
 				</h2>
 				<div className=" title title-fz48 education__subtitle">
-					Знання, які мені домогають
+					{getAllTextsOfSite("educationTitle")}
 				</div>
 				<div className="divider">
 					<span></span>
 				</div>
-
 				<div className="education__outerline">
 					<span></span>
 				</div>
@@ -40,14 +39,13 @@ const Education = () => {
 						<img className="education__img" src={Study} alt="study" /><span>
 						</span>
 					</div>
-
 					<div className="education__column">
 						<h3 className=" title title-fz20 education__column-title"
 							id='first'>
-							Навчання
+							{getAllTextsOfSite("educationTitleContent")}
 						</h3>
 						<ul>
-						<li>
+							<li>
 								<div className="education__line-one">
 									<span>
 									</span>
@@ -64,11 +62,11 @@ const Education = () => {
 											<img src={Icons} alt={'university'} />
 										</div>
 										<h4 className='title title-fz14 education__finished'>
-											ДГУ ім. С. С. Прокоф'єва
+											{getAllTextsOfSite("educationContentItemFirst")}
 										</h4>
-										<div className="education__degree">Диплом спеціаліста</div>
+										<div className="education__degree">{getAllTextsOfSite("educationContentSubItemFirst")}</div>
 										<div className="education__body">
-											Я отримав вищу освіту у сфері музики. Безпосередньо це не пов'язано з програмуванням, проте сформувало в мені розуміння естетики та гарного смаку. Безумовно, ці якості будуть впливати на те, як виглядатиме ваш сайт.
+											{getAllTextsOfSite("educationContentFirst")}
 										</div>
 									</div>
 								</div>
@@ -84,7 +82,6 @@ const Education = () => {
 								</div>
 								<div className="education__line-three"></div>
 								<div className="education__item">
-
 									<img className='education__direction' src={personWalk} alt='persone__walk'></img>
 									<div className="education__item-head">
 										<div className="education__item-icon">
@@ -93,9 +90,10 @@ const Education = () => {
 										<h4 className='title title-fz14 education__finished'>
 											Udemy
 										</h4>
-										<div className="education__degree">Курс по Web-розробці <span>|</span> Курс по JavaScript</div>
+										<div className="education__degree">{getAllTextsOfSite("educationContentSubItemSecondOne")}
+											<span> |</span>{getAllTextsOfSite("educationContentSubItemSecondTwo")}</div>
 										<div className="education__body">
-											Під час навчання я ознайомився з різноманітними підходами у веб-розробці і зрозумів тонкощі, які необхідні для створення сайту та інтерактивності на ньому. Я знаю, як грамотно організувати веб-ресурс і як максимально його оптимізувати.
+											{getAllTextsOfSite("educationContentSecond")}
 										</div>
 									</div>
 								</div>
@@ -119,14 +117,14 @@ const Education = () => {
 										<h4 className='title title-fz14 education__finished'>
 											Udemy
 										</h4>
-										<div className="education__degree">Курс по React</div>
+										<div className="education__degree">{getAllTextsOfSite("educationContentSubItemThird")}</div>
 										<div className="education__body">
-											Я отримав знання, які дозволяють розширювати функціональність сайту і не тільки. Я вмію створювати web-додатки, функціональність яких націлена на вирішення певних завдань, і виходить за рамки простого споживання контенту.
+											{getAllTextsOfSite("educationContentThird")}
 										</div>
 									</div>
 								</div>
 							</li>
-							
+
 						</ul>
 					</div>
 

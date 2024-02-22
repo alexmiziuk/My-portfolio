@@ -19,7 +19,7 @@ import Viber from '../../Icons/contacts_icons/viber.svg';
 import WhatSapp from '../../Icons/contacts_icons/whatsapp.svg';
 import Github from '../../Icons/contacts_icons/github.svg';
 
-const Contacts = ({ privacyPolicy, setPrivacyPolicy }) => {
+const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 
 	useEffect(() => {
 		new WOW.WOW({
@@ -83,16 +83,16 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy }) => {
 					</div>
 					<div className="contacts__descr">
 						<h2 className="title title-fz16 contacts__title" id='contactsid'>
-							Контакти
+							{getAllTextsOfSite("contactsSubTitle")}
 						</h2>
 						<div className="wow animate__shakeX title title-fz48 contacts__subtitle" data-wow-duration="1.2s" data-wow-delay="1.5s">
-							Зв'яжіться зі мною
+							{getAllTextsOfSite("contactsTitle")}
 						</div>
 						<div className="divider">
 							<span></span>
 						</div>
 						<div className="title title-fz14 contacts__text">
-							Будь-яким зручним для вас способом
+							{getAllTextsOfSite("contactsFormTitle")}
 						</div>
 						<div className="contacts__socials">
 							<div className="contacts__social">
@@ -132,29 +132,29 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy }) => {
 							</div>
 						</div>
 						<div className="title title-fz14 contacts__text">
-							Або залиште ваші дані, я сам вам напишу
+							{getAllTextsOfSite("contactsFormTitleSecond")}
 						</div>
 						<form ref={form} onSubmit={sendEmail} className='contacts__form'>
 							<div className='contacts__input'>
 								<input name='user_name' required='required' id='name' type="text" maxLength='50' />
-								<label htmlFor="name">Ваше ім'я</label>
+								<label htmlFor="name">{getAllTextsOfSite("contactsLabelName")}</label>
 							</div>
 							<div className='contacts__input'>
-								
+
 								<input name="user_email" required='required' id='email' type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxLength='50' />
-								<label htmlFor="email">Ваша пошта</label>
+								<label htmlFor="email">{getAllTextsOfSite("contactsLabelEmail")}</label>
 							</div>
 							<div className='contacts__textarea'>
 								<textarea className='contacts__textarea' maxLength='2000' name="message" id="text">
 								</textarea >
-								<label className='contacts__label' htmlFor="text">Ваше повідомлення</label>
+								<label className='contacts__label' htmlFor="text">{getAllTextsOfSite("contactsLabelMessage")}</label>
 							</div>
 
 
 							<div className="center " >
 								<button className="btn contacts__btn" onClick={fetchData}>
 									{isLoading ? "" :
-										(<span>Відправити повідомлення</span>)}
+										(<span>{getAllTextsOfSite("contactsFormBtn")}</span>)}
 								</button>
 								{isLoading ? <div class="lds-ellipsis">
 									<div></div>
@@ -165,8 +165,12 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy }) => {
 							</div>
 							<div className="contacts__privacy">
 								<input className='contacts__checkbox' type="checkbox" required='required' />
-								<span className='contacts__agreement' id='link'>Я згоден(а) із <a href="/#privacy" className='button__privacy' onClick={() => setPrivacyPolicy(!privacyPolicy)}>політикою конфіденційності</a></span>
-
+								<span className='contacts__agreement' id='link'>{getAllTextsOfSite("contactsLinkPrivacyFirst")}
+									<a href="/#privacy"
+										className='button__privacy'
+										onClick={() => setPrivacyPolicy(!privacyPolicy)}>{getAllTextsOfSite("contactsLinkPrivacySecond")}
+									</a>
+								</span>
 							</div>
 							<ArrowScrollUp />
 						</form>

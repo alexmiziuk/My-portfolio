@@ -9,16 +9,16 @@ import Interior from '../../Image/works/Interior.jpg';
 import Nature from '../../Image/works/nature.jpg';
 import Tehnology from '../../Image/works/tehnology.jpg';
 
-const Portfolio = () => {
+const Portfolio = ({ getAllTextsOfSite }) => {
 	
 	return (
 		<section className="portfolio" >
 			<div className="container">
 				<h2 className="title title-fz16 portfolio__title" id='portfolioid'>
-					Портфоліо
+					{getAllTextsOfSite ("portfolioSubTitle")}
 				</h2>
 				<div className="title title-fz48 portfolio__subtitle" >
-					Мої роботи
+				{getAllTextsOfSite ("potfolioTitle")}
 				</div>
 				<div className="divider">
 					<span></span>

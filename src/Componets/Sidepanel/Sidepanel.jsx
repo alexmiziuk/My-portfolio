@@ -7,7 +7,7 @@ import instagram from '../../Icons/social/instagram.svg'
 import Telegram from '../../Icons/social/telegram.svg'
 
 
-const Sidepanel = () => {
+const Sidepanel = ({getAllTextsOfSite}) => {
 	return (
 		<aside className='sidepanel'>
 			<a href='https://www.facebook.com/sasha.mizuk'  className="sidepanel__link">
@@ -26,7 +26,7 @@ const Sidepanel = () => {
 
 			</div>
 			<div className="sidepanel__text">
-				<span>Соціальні мережі</span>
+				<span>{getAllTextsOfSite("sidePanel")}</span>
 			</div>
 		</aside>
 	);

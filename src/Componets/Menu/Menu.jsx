@@ -2,13 +2,13 @@ import React from 'react';
 import MenuList from '../MenuList/MenuList';
 import './Menu.scss';
 
-const Menu = ({ active, setActive }) => {
+const Menu = ({ active, setActive, getAllTextsOfSite}) => {
 	const items = [
-		{ id: 1, value: 'ПРО МЕНЕ', href: '/#aboutid' },
-		{ id: 2, value: 'МОЯ ОСВІТА', href: '/#educationid' },
-		{ id: 3, value: 'МОЇ НАВИЧКИ', href: '/#skillsid' },
-		{ id: 4, value: 'МОЇ РОБОТИ', href: '/#portfolioid' },
-		{ id: 5, value: 'КОНТАКТИ', href: '/#contactsid' }
+		{ id: 1, value: getAllTextsOfSite("menuItemFirst"), href: '/#aboutid' },
+		{ id: 2, value:  getAllTextsOfSite("menuItemSecond"), href: '/#educationid' },
+		{ id: 3, value: getAllTextsOfSite("menuItemThird"), href: '/#skillsid' },
+		{ id: 4, value: getAllTextsOfSite("menuItemForth"), href: '/#portfolioid' },
+		{ id: 5, value: getAllTextsOfSite("menuItemFifth"), href: '/#contactsid' }
 	]
 	return (
 		<div className={active ? 'menu active' : 'menu'} onClick={() => setActive(false)}>

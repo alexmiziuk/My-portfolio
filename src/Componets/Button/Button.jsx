@@ -1,7 +1,7 @@
 import React from 'react';
 import './Button.scss'
 
-const Button = () => {
+const Button = ({getAllTextsOfSite}) => {
 	return (
 		<div className="center">
 			<a href='/#portfolioid' className="btn">
@@ -9,7 +9,7 @@ const Button = () => {
 					<polyline points="179,1 179,59 1,59 1,1 179,1" className="bg-line" />
 					<polyline points="179,1 179,59 1,59 1,1 179,1" className="hl-line" />
 				</svg>
-				<span>ПОРТФОЛІО</span>
+				<span>{ getAllTextsOfSite("promoBtn")}</span>
 			</a>
 		</div>
 	);
