@@ -17,7 +17,7 @@
 	background: transparent;
 	border: 1px solid $main-color;
 	outline: none;
-	transition: 1s ease-in-out;
+	transition: all 0.6s ease-in-out;
 	span {
 		font-family: "Lato Medium";
 		color: white;
@@ -37,7 +37,7 @@ svg {
 }
 
 .btn:hover {
-	transition: 1s ease-in-out;
+	
 	background: #4f95da;
 }
 

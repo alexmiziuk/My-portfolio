@@ -8,6 +8,8 @@ import CarWash from '../../Image/works/isckraCarWash.jpg';
 import Interior from '../../Image/works/Interior.jpg';
 import Nature from '../../Image/works/nature.jpg';
 import Tehnology from '../../Image/works/tehnology.jpg';
+import ElectroBoiler from '../../Image/works/electricBoiler.jpg';
+import businessSchool from '../../Image/works/promo-img-second.jpg'
 
 const Portfolio = ({ getAllTextsOfSite }) => {
 	
@@ -31,15 +33,15 @@ const Portfolio = ({ getAllTextsOfSite }) => {
 						</a>
 					</div>
 					<div className='portfolio__efect' id='second'>
-						<a href="https://65154654692f1e7516f78496--sparkly-frangipane-0ae6f3.netlify.app/" className="portfolio__item">
-							<img src={CarWash}
-								alt={"Car Wash"} />
+						<a href="https://glittery-cupcake-bc2d76.netlify.app/" className="portfolio__item">
+							<img src={businessSchool} className='img-three'
+								alt={"Business School"} />
 						</a>
 					</div>
 					<div className='portfolio__efect' id='three'>
-						<a href="/#nameOfId" className="portfolio__item">
-							<img src={Interior}
-								alt={"Interior"} />
+						<a href="https://alexmiziuk.github.io/Electro-Boilers/" className="portfolio__item">
+							<img src={ElectroBoiler}
+								alt={"Electro Boiler"} />
 						</a>
 					</div>
 					<div className='portfolio__efect' id='fourth'>
@@ -49,9 +51,9 @@ const Portfolio = ({ getAllTextsOfSite }) => {
 						</a>
 					</div>
 					<div className='portfolio__efect' id='fifth'>
-						<a href="/#nameOfId" className="portfolio__item">
-							<img src={Tehnology}
-								alt={"Tehnology"} />
+						<a href="https://65154654692f1e7516f78496--sparkly-frangipane-0ae6f3.netlify.app/" className="portfolio__item">
+							<img src={CarWash}
+								alt={"Car Wash"} />
 						</a>
 					</div>
 				</div>

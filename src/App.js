@@ -11,7 +11,7 @@ import Skills from './Componets/Skills/Skills';
 import Portfolio from './Componets/Portfolio/Portfolio';
 import Hamburger from './Componets/Hamburger/Hamburger';
 import Privacy from './Componets/Privacy/Privacy';
-import BtnEnUk from './BtnEnUk/BtnEnUk';
+import BtnEnUk from './Componets/BtnEnUk/BtnEnUk';
 import './App.scss';
 
 
