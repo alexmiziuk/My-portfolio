@@ -1,15 +1,11 @@
 import React from 'react';
-
 import './Portfolio.scss';
 import '../Animate/Animate.css';
-
 import coffeeShop from '../../Image/works/pleasure-bg.png';
 import CarWash from '../../Image/works/isckraCarWash.jpg';
-import Interior from '../../Image/works/Interior.jpg';
-import Nature from '../../Image/works/nature.jpg';
-import Tehnology from '../../Image/works/tehnology.jpg';
+import buetifulSlovenia from '../../Image/works/buetiful-slovenia.jpg';
 import ElectroBoiler from '../../Image/works/electricBoiler.jpg';
-import businessSchool from '../../Image/works/promo-img-second.jpg'
+import businessSchool from '../../Image/works/promo-img-second.jpg';
 
 const Portfolio = ({ getAllTextsOfSite }) => {
 	
@@ -45,9 +41,9 @@ const Portfolio = ({ getAllTextsOfSite }) => {
 						</a>
 					</div>
 					<div className='portfolio__efect' id='fourth'>
-						<a href="/#nameOfId" className="portfolio__item ">
-							<img className='vertical'src={Nature}
-								alt={"Nature"} />
+						<a href="https://beautiful-slovenia.web.app/" className="portfolio__item ">
+							<img className='vertical'src={buetifulSlovenia}
+								alt={"Beautiful Slovenia"} />
 						</a>
 					</div>
 					<div className='portfolio__efect' id='fifth'>
