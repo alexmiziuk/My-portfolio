@@ -41,7 +41,7 @@ const Portfolio = ({ getAllTextsOfSite }) => {
 						</a>
 					</div>
 					<div className='portfolio__efect' id='fourth'>
-						<a href="https://beautiful-slovenia.web.app/" className="portfolio__item ">
+						<a href="https://slovenia-8t8t.vercel.app/" className="portfolio__item ">
 							<img className='vertical'src={buetifulSlovenia}
 								alt={"Beautiful Slovenia"} />
 						</a>
