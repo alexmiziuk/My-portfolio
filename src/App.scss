@@ -1,38 +1,38 @@
 // .App {
-	.container {
-		margin: 0 auto;
-		width: 1140px;
-	}
+.container {
+	margin: 0 auto;
+	width: 1140px;
+}
 // }
 
 @media (max-width: 1200px) {
 	// .App {
-		.container {
-			max-width: 960px;
-		}
+	.container {
+		max-width: 960px;
+	}
 	// }
 }
 
 @media (max-width: 992px) {
 	// .App {
-		.container {
-			max-width: 720px;
-		}
+	.container {
+		max-width: 720px;
+	}
 	// }
 }
 
 @media (max-width: 768px) {
 	// .App {
-		.container {
-			max-width: 540px;
-		}
+	.container {
+		max-width: 540px;
+	}
 	// }
 }
 
 @media (max-width: 576px) {
 	// .App {
-		.container {
-			width: 93.5%;
-		}
+	.container {
+		width: 93.5%;
+	}
 	// }
 }
