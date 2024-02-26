@@ -110,6 +110,9 @@
 		margin-bottom: 0;
 		height: 18px;
 	}
+	&__privacy {
+		position: relative;
+	}
 
 	.center {
 		width: 271px;
@@ -200,6 +203,24 @@
 }
 .unvisibal {
 	display: none;
+}
+.error__message {
+	color: red;
+	font-size: 16px;
+	position: absolute;
+	left: 20px;
+	&-name {
+		top: 25px;
+	}
+	&-email {
+		top: 25px;
+	}
+	&-textarea {
+		top: 169px;
+	}
+	&-privacy {
+		top: 39px;
+	}
 }
 
 @keyframes lds-ellipsis1 {

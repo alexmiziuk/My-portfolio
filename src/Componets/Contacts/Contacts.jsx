@@ -18,30 +18,114 @@ import Whatsapp from '../../Icons/contacts_icons/whatsapp.svg';
 import Github from '../../Icons/contacts_icons/github.svg';
 
 const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
-
 	useEffect(() => {
 		new WOW.WOW({
 			live: false
 		}).init();
 	}, [])
 
+	const [formData, setFormData] = useState({
+		user_name: '',
+		user_email: '',
+		message: '',
+		isPrivacyChecked: false // Состояние для отслеживания флажка согласия с политикой конфиденциальности
+	});
+
+	const [errors, setErrors] = useState({});
+
+	const handleChange = (event) => {
+		const { name, value, type, checked } = event.target;
+		setFormData({
+			...formData,
+			[name]: type === 'checkbox' ? checked : value // Обновляем состояние в зависимости от типа поля
+		});
+		setErrors({
+			...errors,
+			[name]: '' // Очищаем ошибку для данного поля
+		});
+
+		// Если чекбокс согласия был отмечен, то очистить сообщение об ошибке
+		if (name === 'isPrivacyChecked' && checked) {
+			setErrors({
+				...errors,
+				privacy: ''
+			});
+		}
+	};
+
+	// Функция для очистки сообщения об ошибке при клике на поле ввода
+	const handleInputClick = (fieldName) => {
+		setErrors({
+			...errors,
+			[fieldName]: ''
+		});
+	};
+
+	const validateForm = () => {
+		let isValid = true;
+		const errors = {};
+
+		if (!formData.user_name.trim()) {
+			errors.user_name = 'Имя обязательно для заполнения';
+			isValid = false;
+		}
+
+		if (!formData.user_email.trim()) {
+			errors.user_email = 'Email обязателен для заполнения';
+			isValid = false;
+		} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.user_email)) {
+			errors.user_email = 'Некорректный формат email';
+			isValid = false;
+		}
+
+		if (!formData.message.trim()) {
+			errors.message = 'Сообщение обязательно для заполнения';
+			isValid = false;
+		}
+
+		if (!formData.isPrivacyChecked) { // Проверяем состояние флажка согласия с политикой конфиденциальности
+			errors.privacy = 'Необходимо согласиться с политикой конфиденциальности';
+			isValid = false;
+		}
+
+		setErrors(errors);
+		return isValid;
+	};
+
 	const [isLoading, setLoading] = useState(false);
-	
+
 	const handleSubmit = async (event) => {
 		try {
-		  event.preventDefault();
-		  const formData = new FormData(event.target);
-		  const values = Object.fromEntries(formData.entries());
-		  const message = `Ім'я: ${values.user_name} Email: ${values.user_email} Повідомлення: ${values.message}`;
-		  setLoading(true);
-		  await sendMessage(message, getAllTextsOfSite);
-		  event.target.reset();
+			event.preventDefault();
+			const isValid = validateForm();
+			if (isValid) {
+				const formData = new FormData(event.target);
+				const values = Object.fromEntries(formData.entries());
+				const message = `Ім'я: ${values.user_name} Email: ${values.user_email} Повідомлення: ${values.message}`;
+				setLoading(true);
+				await sendMessage(message, getAllTextsOfSite);
+
+				// Очищаем состояние формы после успешной отправки
+				setFormData({
+					user_name: '',
+					user_email: '',
+					message: '',
+					isPrivacyChecked: false
+				});
+
+				// Очищаем состояние ошибок
+				setErrors({});
+
+				// Обновляем isLoading после отправки
+				setLoading(false);
+			}
 		} catch (error) {
-		  console.error('Ошибка при обработке формы:', error);
+			console.error('Ошибка при обработке формы:', error);
 		} finally {
-		  setLoading(false);
+			setLoading(false);
 		}
-	 };
+	};
+
 
 	return (
 		<section className={privacyPolicy ? 'contacts unvisibal' : 'contacts'} >
@@ -103,19 +187,41 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 						<div className="title title-fz14 contacts__text">
 							{getAllTextsOfSite("contactsFormTitleSecond")}
 						</div>
-						<form className='contacts__form' onSubmit={handleSubmit}>
+						<form className='contacts__form' onSubmit={handleSubmit} noValidate>
 							<div className='contacts__input'>
-								<input name='user_name' required='required' id='name' type="text" maxLength='50' />
+								<input
+									name='user_name'
+									id='name' type="text"
+									maxLength='50'
+									value={formData.user_name}
+									onChange={handleChange}
+									onClick={() => handleInputClick('user_name')} />
 								<label htmlFor="name">{getAllTextsOfSite("contactsLabelName")}</label>
+								{errors.user_name && <span className="error__message error__message-name">{errors.user_name}</span>}
 							</div>
 							<div className='contacts__input'>
-								<input name="user_email" required='required' id='email' type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxLength='50' />
+								<input
+									name="user_email"
+									id='email'
+									type="email"
+									value={formData.user_email}
+									onChange={handleChange}
+									onClick={() => handleInputClick('user_email')} />
 								<label htmlFor="email">{getAllTextsOfSite("contactsLabelEmail")}</label>
+								{errors.user_email && <span className="error__message error__message-email">{errors.user_email}</span>}
 							</div>
 							<div className='contacts__textarea'>
-								<textarea className='contacts__textarea' maxLength='2000' name="message" id="text">
+								<textarea
+									className='contacts__textarea'
+									maxLength='2000'
+									name="message"
+									id="text"
+									value={formData.message}
+									onChange={handleChange}
+									onClick={() => handleInputClick('message')}>
 								</textarea >
 								<label className='contacts__label' htmlFor="text">{getAllTextsOfSite("contactsLabelMessage")}</label>
+								{errors.message && <span className="error__message error__message-textarea">{errors.message}</span>}
 							</div>
 							<div className="center " >
 								<button className="btn contacts__btn">
@@ -130,13 +236,20 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 								</div> : ''}
 							</div>
 							<div className="contacts__privacy">
-								<input className='contacts__checkbox' type="checkbox" required='required' />
+								<input
+									className='contacts__checkbox'
+									type="checkbox"
+									name="isPrivacyChecked"
+									checked={formData.isPrivacyChecked}
+									onChange={handleChange}
+								/>
 								<span className='contacts__agreement' id='link'>{getAllTextsOfSite("contactsLinkPrivacyFirst")}
 									<a href="/#privacy"
 										className='button__privacy'
 										onClick={() => setPrivacyPolicy(!privacyPolicy)}>{getAllTextsOfSite("contactsLinkPrivacySecond")}
 									</a>
 								</span>
+								{errors.privacy && <span className="error__message error__message-privacy">{errors.privacy}</span>}
 							</div>
 							<ArrowScrollUp />
 						</form>
