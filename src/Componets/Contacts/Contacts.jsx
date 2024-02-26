@@ -1,10 +1,10 @@
 import WOW from 'wowjs';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import swal from 'sweetalert';
 
 import { ArrowScrollUp } from '../ArrowScrollUp/ArrowScrollUp';
 
+import sendMessage from '../../sendMessage/sendMessage';
 import './Contacts.scss';
 import '../Animate/Animate.css';
 
@@ -25,60 +25,23 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 		}).init();
 	}, [])
 
-	const baseUrl = 'https://api.telegram.org/bot/';
-
-	const sendMessage = async (message) => {
-		try {
-			const url = `${baseUrl}sendMessage?chat_id=-4180692441&text=${message}`;
-			const response = await fetch(url);
-			if (response.ok) {
-				const responseData = await response.json();
-				console.log('response', responseData);
-				swal({
-					title: getAllTextsOfSite('swalTitleTrue'),
-					text: getAllTextsOfSite('swalTextTrue'),
-					button: false,
-					className: "swal-title",
-					timer: 4500,
-				});
-			} else {
-				swal({
-					title: getAllTextsOfSite('swalTitleFalse'),
-					text: getAllTextsOfSite('swalTextFalse'),
-					button: false,
-					className: "swal-title",
-					timer: 4500,
-				});
-				throw new Error('Ошибка при отправке сообщения');
-			}
-		} catch (error) {
-			console.error('Ошибка при отправке сообщения:', error);
-			swal({
-				title: getAllTextsOfSite('swalTitleFalse'),
-				text: getAllTextsOfSite('swalTextFalse'),
-				button: false,
-				className: "swal-title",
-				timer: 4500,
-			});
-		}
-	};
-
 	const [isLoading, setLoading] = useState(false);
+	
 	const handleSubmit = async (event) => {
 		try {
-			event.preventDefault();
-			const formData = new FormData(event.target);
-			const values = Object.fromEntries(formData.entries());
-			const message = `Имя: ${values.user_name} Email: ${values.user_email} Сообщение: ${values.message}`;
-			setLoading(true);
-			await sendMessage(message);
-			event.target.reset();
+		  event.preventDefault();
+		  const formData = new FormData(event.target);
+		  const values = Object.fromEntries(formData.entries());
+		  const message = `Ім'я: ${values.user_name} Email: ${values.user_email} Повідомлення: ${values.message}`;
+		  setLoading(true);
+		  await sendMessage(message, getAllTextsOfSite);
+		  event.target.reset();
 		} catch (error) {
-			console.error('Ошибка при обработке формы:', error);
+		  console.error('Ошибка при обработке формы:', error);
 		} finally {
-			setLoading(false);
+		  setLoading(false);
 		}
-	};
+	 };
 
 	return (
 		<section className={privacyPolicy ? 'contacts unvisibal' : 'contacts'} >
