@@ -156,6 +156,10 @@ function App() {
 				privacyTextTwelveFirst: "12.1. Користувач може отримати будь-які роз'яснення стосовно питань, які стосуються обробки його персональних даних, звернувшись до Оператора за допомогою електронної пошти muzikbasss@gmail.com.",
 				privacyTextTwelveSecond: "12.2. У цьому документі буде відображено будь-які зміни політики обробки персональних даних Оператором. Політика діє безстроково до заміни її новою версією.",
 				privacyTextTwelveThird: "12.3. Актуальна версія Політики у вільному доступі розміщена у мережі Інтернет за адресою",
+				swalTitleTrue: "Дякую за ваше повідомлення",
+				swalTextTrue: "Я обов'язково зв'яжуся з вами найближчим часом",
+				swalTitleFalse: "Щось пішло не так",
+				swalTextFalse: "Швидше за все проблеми зі зв'язком, перевірте інтернет",
 			},
 
 			english: {
@@ -281,6 +285,10 @@ function App() {
 				privacyTextTwelveFirst: "12.1. The User may receive any clarifications regarding issues related to the processing of his/her personal data by contacting the Operator via e-mail muzikbasss@gmail.com.",
 				privacyTextTwelveSecond: "12.2. This document will reflect any changes to the personal data processing policy of the Operator. The Policy is valid indefinitely until replaced by a new version.",
 				privacyTextTwelveThird: "12.3 The current version of the Policy is freely available on the Internet at",
+				swalTitleTrue: "Thank you for your message",
+				swalTextTrue: "I will definitely get back to you as soon as possible",
+				swalTitleFalse: "Something went wrong",
+				swalTextFalse: "Most likely, there are problems with the connection, check the Internet",
 			},
 		};
 

@@ -1,5 +1,3 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
 import WOW from 'wowjs';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -14,9 +12,9 @@ import ImgContacts from '../../Image/photo_contacts.jpg';
 import Facebook from '../../Icons/contacts_icons/Facebook.svg';
 import Telegram from '../../Icons/contacts_icons/telegram.svg';
 import Instagram from '../../Icons/contacts_icons/Instagram.svg';
-import Linkeden from '../../Icons/contacts_icons/linkeden.svg';
+import Linkedin from '../../Icons/contacts_icons/linkedin.svg';
 import Viber from '../../Icons/contacts_icons/viber.svg';
-import WhatSapp from '../../Icons/contacts_icons/whatsapp.svg';
+import Whatsapp from '../../Icons/contacts_icons/whatsapp.svg';
 import Github from '../../Icons/contacts_icons/github.svg';
 
 const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
@@ -27,53 +25,61 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 		}).init();
 	}, [])
 
-	const [isLoading, setLoading] = useState(false);
-	const fetchData = () => {
-		setLoading(true);
-		setTimeout(() => {
-			setLoading(false);
-		}, 3500)
-	}
+	const baseUrl = 'https://api.telegram.org/bot/';
 
-	const form = useRef();
-
-	const sendEmail = (e) => {
-		e.preventDefault();
-
-
-		emailjs
-			.sendForm(
-				'service_iz3q98w',
-				'template_o8oero8',
-				form.current,
-				'Fbwj128saP-tFdXyN'
-			)
-			.then((result) => {
-				e.target.reset();
+	const sendMessage = async (message) => {
+		try {
+			const url = `${baseUrl}sendMessage?chat_id=-4180692441&text=${message}`;
+			const response = await fetch(url);
+			if (response.ok) {
+				const responseData = await response.json();
+				console.log('response', responseData);
 				swal({
-					title: "Дякую за ваше повідомлення",
-					text: "Я обов'язково зв'яжуся з вами найближчим часом",
+					title: getAllTextsOfSite('swalTitleTrue'),
+					text: getAllTextsOfSite('swalTextTrue'),
 					button: false,
 					className: "swal-title",
-					timer: 3500,
-				})
-				console.log(result.text);
-				console.log("message sent")
-
-			},
-				(error) => {
-					e.target.reset();
-					swal({
-						title: "Щось пішло не так",
-						text: "Швидше за все проблеми зі зв'язком, перевірте інтернет",
-						button: false,
-						className: "swal-title",
-						timer: 3500,
-					})
-					console.log(error.text);
-				}
-			);
+					timer: 4500,
+				});
+			} else {
+				swal({
+					title: getAllTextsOfSite('swalTitleFalse'),
+					text: getAllTextsOfSite('swalTextFalse'),
+					button: false,
+					className: "swal-title",
+					timer: 4500,
+				});
+				throw new Error('Ошибка при отправке сообщения');
+			}
+		} catch (error) {
+			console.error('Ошибка при отправке сообщения:', error);
+			swal({
+				title: getAllTextsOfSite('swalTitleFalse'),
+				text: getAllTextsOfSite('swalTextFalse'),
+				button: false,
+				className: "swal-title",
+				timer: 4500,
+			});
+		}
 	};
+
+	const [isLoading, setLoading] = useState(false);
+	const handleSubmit = async (event) => {
+		try {
+			event.preventDefault();
+			const formData = new FormData(event.target);
+			const values = Object.fromEntries(formData.entries());
+			const message = `Имя: ${values.user_name} Email: ${values.user_email} Сообщение: ${values.message}`;
+			setLoading(true);
+			await sendMessage(message);
+			event.target.reset();
+		} catch (error) {
+			console.error('Ошибка при обработке формы:', error);
+		} finally {
+			setLoading(false);
+		}
+	};
+
 	return (
 		<section className={privacyPolicy ? 'contacts unvisibal' : 'contacts'} >
 			<div className="container">
@@ -112,7 +118,7 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 							</div>
 							<div className="contacts__social ">
 								<a href='https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D0%BC%D0%B8%D0%B7%D1%8E%D0%BA-290766112/' className="contacts__links">
-									<img className='linkeden' src={Linkeden} alt={'Linkeden'} />
+									<img className='linkedin' src={Linkedin} alt={'Linkedin'} />
 								</a>
 							</div>
 							<div className="contacts__social">
@@ -122,7 +128,7 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 							</div>
 							<div className="contacts__social">
 								<a href=' https://api.whatsapp.com/send?phone=380663790585' className="contacts__links">
-									<img src={WhatSapp} alt={'Whatsupp'} />
+									<img src={Whatsapp} alt={'Whatsapp'} />
 								</a>
 							</div>
 							<div className="contacts__social">
@@ -134,13 +140,12 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 						<div className="title title-fz14 contacts__text">
 							{getAllTextsOfSite("contactsFormTitleSecond")}
 						</div>
-						<form ref={form} onSubmit={sendEmail} className='contacts__form'>
+						<form className='contacts__form' onSubmit={handleSubmit}>
 							<div className='contacts__input'>
 								<input name='user_name' required='required' id='name' type="text" maxLength='50' />
 								<label htmlFor="name">{getAllTextsOfSite("contactsLabelName")}</label>
 							</div>
 							<div className='contacts__input'>
-
 								<input name="user_email" required='required' id='email' type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxLength='50' />
 								<label htmlFor="email">{getAllTextsOfSite("contactsLabelEmail")}</label>
 							</div>
@@ -149,14 +154,12 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 								</textarea >
 								<label className='contacts__label' htmlFor="text">{getAllTextsOfSite("contactsLabelMessage")}</label>
 							</div>
-
-
 							<div className="center " >
-								<button className="btn contacts__btn" onClick={fetchData}>
+								<button className="btn contacts__btn">
 									{isLoading ? "" :
 										(<span>{getAllTextsOfSite("contactsFormBtn")}</span>)}
 								</button>
-								{isLoading ? <div class="lds-ellipsis">
+								{isLoading ? <div className="lds-ellipsis">
 									<div></div>
 									<div></div>
 									<div></div>
