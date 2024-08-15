@@ -1,6 +1,6 @@
 import swal from 'sweetalert';
 
-const baseUrl = 'https://api.telegram.org/bot/';
+const baseUrl = 'https://api.telegram.org/bot6631141549:AAFhFlA9FGE3jzjrpNTASXQLm7PARVMnOT8/';
 
 const sendMessage = async (message, getAllTextsOfSite) => {
   try {

@@ -66,25 +66,25 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 		const errors = {};
 
 		if (!formData.user_name.trim()) {
-			errors.user_name = 'Имя обязательно для заполнения';
+			errors.user_name =getAllTextsOfSite('errorName');
 			isValid = false;
 		}
 
 		if (!formData.user_email.trim()) {
-			errors.user_email = 'Email обязателен для заполнения';
+			errors.user_email = getAllTextsOfSite('errorEmail');
 			isValid = false;
 		} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.user_email)) {
-			errors.user_email = 'Некорректный формат email';
+			errors.user_email = getAllTextsOfSite('errorEmailIncorrect');
 			isValid = false;
 		}
 
 		if (!formData.message.trim()) {
-			errors.message = 'Сообщение обязательно для заполнения';
+			errors.message = getAllTextsOfSite('errorMessage');
 			isValid = false;
 		}
 
 		if (!formData.isPrivacyChecked) { // Проверяем состояние флажка согласия с политикой конфиденциальности
-			errors.privacy = 'Необходимо согласиться с политикой конфиденциальности';
+			errors.privacy = getAllTextsOfSite('errorPrivacy');
 			isValid = false;
 		}
 
@@ -125,7 +125,6 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 			setLoading(false);
 		}
 	};
-
 
 	return (
 		<section className={privacyPolicy ? 'contacts unvisibal' : 'contacts'} >

@@ -160,7 +160,12 @@ function App() {
 				swalTextTrue: "Я обов'язково зв'яжуся з вами найближчим часом",
 				swalTitleFalse: "Щось пішло не так",
 				swalTextFalse: "Швидше за все проблеми зі зв'язком, перевірте інтернет",
-			},
+				errorName: "Введіть будь ласка ваше ім'я",
+				errorEmail: "Введіть будь ласка ваш email",
+				errorEmailIncorrect: "Некоректний формат email",
+				errorMessage: "Введіть будь ласка ваше повідомлення",
+				errorPrivacy: "Ви згодні з політикою конфедиційності?",
+},
 
 			english: {
 				sidePanel: "## Social networks",
@@ -289,6 +294,11 @@ function App() {
 				swalTextTrue: "I will definitely get back to you as soon as possible",
 				swalTitleFalse: "Something went wrong",
 				swalTextFalse: "Most likely, there are problems with the connection, check the Internet",
+				errorName: "Please enter your name",
+				errorEmail: "Please enter your email address",
+				errorEmailIncorrect: "Invalid email format",
+				errorMessage: "Please enter your message",
+				errorPrivacy: "Do you agree with the policy of confidentiality?",
 			},
 		};
 
@@ -308,7 +318,7 @@ function App() {
 			<Menu
 				active={state}
 				setActive={setState}
-				getAllTextsOfSite={getAllTextsOfSite}/>
+				getAllTextsOfSite={getAllTextsOfSite} />
 			<MyPromo getAllTextsOfSite={getAllTextsOfSite} />
 			<About getAllTextsOfSite={getAllTextsOfSite} />
 			<Education getAllTextsOfSite={getAllTextsOfSite} />

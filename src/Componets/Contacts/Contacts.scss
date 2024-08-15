@@ -206,17 +206,18 @@
 }
 .error__message {
 	color: red;
-	font-size: 16px;
+	font-size: 14px;
+	font-weight: 700;
 	position: absolute;
 	left: 20px;
 	&-name {
-		top: 25px;
+		top: 31px;
 	}
 	&-email {
-		top: 25px;
+		top: 31px;
 	}
 	&-textarea {
-		top: 169px;
+		top: 175px;
 	}
 	&-privacy {
 		top: 39px;

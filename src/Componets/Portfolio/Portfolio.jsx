@@ -6,6 +6,7 @@ import CarWash from '../../Image/works/isckraCarWash.jpg';
 import buetifulSlovenia from '../../Image/works/buetiful-slovenia.jpg';
 import ElectroBoiler from '../../Image/works/electricBoiler.jpg';
 import businessSchool from '../../Image/works/promo-img-second.jpg';
+import Church from '../../Image/works/church-card.jpg';
 
 const Portfolio = ({ getAllTextsOfSite }) => {
 	
@@ -46,10 +47,17 @@ const Portfolio = ({ getAllTextsOfSite }) => {
 								alt={"Beautiful Slovenia"} />
 						</a>
 					</div>
+				
 					<div className='portfolio__efect' id='fifth'>
 						<a href="https://65154654692f1e7516f78496--sparkly-frangipane-0ae6f3.netlify.app/" className="portfolio__item">
 							<img src={CarWash}
 								alt={"Car Wash"} />
+						</a>
+					</div>
+					<div className='portfolio__efect' id='sixth'>
+						<a href="http://www.evangelijska-cerkev.si/" className="portfolio__item ">
+							<img className='vertical'src={Church}
+								alt={"God"} />
 						</a>
 					</div>
 				</div>
