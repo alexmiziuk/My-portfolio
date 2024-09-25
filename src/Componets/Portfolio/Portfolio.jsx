@@ -7,17 +7,18 @@ import buetifulSlovenia from '../../Image/works/buetiful-slovenia.jpg';
 import ElectroBoiler from '../../Image/works/electricBoiler.jpg';
 import businessSchool from '../../Image/works/promo-img-second.jpg';
 import Church from '../../Image/works/church-card.jpg';
+import Psychologist from '../../Image/works/Psiholog-1.png'
 
 const Portfolio = ({ getAllTextsOfSite }) => {
-	
+
 	return (
 		<section className="portfolio" >
 			<div className="container">
 				<h2 className="title title-fz16 portfolio__title" id='portfolioid'>
-					{getAllTextsOfSite ("portfolioSubTitle")}
+					{getAllTextsOfSite("portfolioSubTitle")}
 				</h2>
 				<div className="title title-fz48 portfolio__subtitle" >
-				{getAllTextsOfSite ("potfolioTitle")}
+					{getAllTextsOfSite("potfolioTitle")}
 				</div>
 				<div className="divider">
 					<span></span>
@@ -35,7 +36,7 @@ const Portfolio = ({ getAllTextsOfSite }) => {
 								alt={"Business School"} />
 						</a>
 					</div>
-					<div className='portfolio__efect' id='three'>
+					<div className='portfolio__efect' id='third'>
 						<a href="https://alexmiziuk.github.io/Electro-Boilers/" className="portfolio__item">
 							<img src={ElectroBoiler}
 								alt={"Electro Boiler"} />
@@ -43,11 +44,10 @@ const Portfolio = ({ getAllTextsOfSite }) => {
 					</div>
 					<div className='portfolio__efect' id='fourth'>
 						<a href="https://beautiful-slovenia-one.web.app/" className="portfolio__item ">
-							<img className='vertical'src={buetifulSlovenia}
+							<img className='vertical' src={buetifulSlovenia}
 								alt={"Beautiful Slovenia"} />
 						</a>
 					</div>
-				
 					<div className='portfolio__efect' id='fifth'>
 						<a href="https://65154654692f1e7516f78496--sparkly-frangipane-0ae6f3.netlify.app/" className="portfolio__item">
 							<img src={CarWash}
@@ -56,8 +56,14 @@ const Portfolio = ({ getAllTextsOfSite }) => {
 					</div>
 					<div className='portfolio__efect' id='sixth'>
 						<a href="http://www.evangelijska-cerkev.si/" className="portfolio__item ">
-							<img className='vertical'src={Church}
+							<img className='vertical' src={Church}
 								alt={"God"} />
+						</a>
+					</div>
+					<div className='portfolio__efect' id='seventh'>
+						<a href="https://www.letim.si/" className="portfolio__item ">
+							<img className='vertical' src={Psychologist}
+								alt={"link to psychologist's website"} />
 						</a>
 					</div>
 				</div>

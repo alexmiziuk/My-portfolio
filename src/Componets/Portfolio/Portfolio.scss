@@ -40,13 +40,27 @@
 		}
 	}
 }
+#third {
+	grid-column: 1/3;
+	grid-row: 3/4;
+}
 
 #fourth {
 	grid-column: 3/4;
 	grid-row: 1/2;
 }
 
+#fifth {
+	grid-column: 3/4;
+	grid-row: 2/4;
+}
+
 #sixth {
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+
+#seventh {
 	grid-column: 1/2;
 	grid-row: 1/2;
 }
