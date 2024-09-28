@@ -86,9 +86,10 @@
 			position: absolute;
 			height: 18px;
 			padding: 0 8px;
-			font-size: 12px;
+			font-size: 11px;
 			margin-bottom: 0;
 			top: -13px;
+			font-family: "Lato Medium";
 		}
 	}
 	&__textarea {
@@ -105,10 +106,11 @@
 	&__label {
 		position: absolute;
 		top: -13px;
-		font-size: 12px;
+		font-size: 11px;
 		padding: 0 8px;
 		margin-bottom: 0;
 		height: 18px;
+		font-family: "Lato Medium";
 	}
 	&__privacy {
 		position: relative;
@@ -205,22 +207,24 @@
 	display: none;
 }
 .error__message {
-	color: red;
-	font-size: 14px;
+	color: rgb(218, 109, 109);
+	font-size: 12px;
 	font-weight: 700;
 	position: absolute;
+	font-family: "Lato Medium";
 	left: 20px;
 	&-name {
-		top: 31px;
+		top: 33px;
 	}
 	&-email {
-		top: 31px;
+		top: 33px;
 	}
 	&-textarea {
-		top: 175px;
+		top: 178px;
 	}
 	&-privacy {
 		top: 39px;
+		line-height: 16px
 	}
 }
 
