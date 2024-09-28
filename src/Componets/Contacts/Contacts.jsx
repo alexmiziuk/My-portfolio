@@ -9,9 +9,7 @@ import './Contacts.scss';
 import '../Animate/Animate.css';
 
 import ImgContacts from '../../Image/photo_contacts.jpg';
-import Facebook from '../../Icons/contacts_icons/Facebook.svg';
 import Telegram from '../../Icons/contacts_icons/telegram.svg';
-import Instagram from '../../Icons/contacts_icons/Instagram.svg';
 import Linkedin from '../../Icons/contacts_icons/linkedin.svg';
 import Viber from '../../Icons/contacts_icons/viber.svg';
 import Whatsapp from '../../Icons/contacts_icons/whatsapp.svg';
@@ -148,18 +146,8 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 						</div>
 						<div className="contacts__socials">
 							<div className="contacts__social">
-								<a href='https://www.facebook.com/sasha.mizuk' className="contacts__links">
-									<img src={Facebook} alt={"facebook"} />
-								</a>
-							</div>
-							<div className="contacts__social">
-								<a href='https://t.me/AlexLikeJazz' className="contacts__links">
+								<a href='https://t.me/OleksandrMiziyk' className="contacts__links">
 									<img className='telegram' src={Telegram} alt={'telegram'} />
-								</a>
-							</div>
-							<div className="contacts__social">
-								<a href='https://www.instagram.com/sumifares/' className="contacts__links">
-									<img className='instagram' src={Instagram} alt={'instagram'} />
 								</a>
 							</div>
 							<div className="contacts__social ">
@@ -173,7 +161,7 @@ const Contacts = ({ privacyPolicy, setPrivacyPolicy, getAllTextsOfSite }) => {
 								</a>
 							</div>
 							<div className="contacts__social">
-								<a href=' https://api.whatsapp.com/send?phone=380663790585' className="contacts__links">
+								<a href='https://api.whatsapp.com/send?phone=380663790585' className="contacts__links">
 									<img src={Whatsapp} alt={'Whatsapp'} />
 								</a>
 							</div>
